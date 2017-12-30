@@ -2,107 +2,72 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Questrial',sans-serif;
-    font-size: 1rem;
+    font-family: 'EB Garamond', serif;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 .container {
     width: 80%;
     margin: auto;
+    border: 1px solid red;
 }
 
 [class^="col-"] {
     float: left;
-    padding-right: 10px;
+    padding: 10px;
 }
 
-[class^="col-"]:last-child {
-    padding-right: 0;
-}
-
-.to-right {
-    float: right;
-}
-
-.clearfix::after {
+[class^="row-"]::after {
     content: '';
     clear: both;
     display: table;
 }
 
-.fluid-img {
-    max-width: 100%;
-    height: auto;
+.content {
+    background: #f0f0f0;
+    padding: 15px;
+    font-size: 0.9rem;
 }
 
-.row {
-    padding-bottom: 20px;
-}
-
-/*.row:last-child {
-    padding-bottom: 0;
-}*/
-
-/*--Header----*/
-
-.title {
-    text-align: center;
-    font-size: 2rem;
-    background: red;
-    padding: 40px 0;
-    color: white;
-}
-
-.title {
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.title-2::first-letter {
-    font-size: 3rem;
-    color: red;
-}
-
-.title-2 {
-    padding: 0 0 10px 30px;
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.py-3 {
-    text-align: justify;
-    text-indent: 20px;
-}
-
-.footer {
-    background: #f02525;
-    padding: 40px;
-}
-
-.footer p {
+.row-footer {
+    padding: 20px;
+    background: brown;
     color: #fff;
 }
 
-.footer-list {
+.footNav {
     list-style-type: none;
+    float: right;
 }
 
-.footer-list li {
-    display: inline-block;
+.foot-rights {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.footLi {
+    float: left;
+    padding: 10px 20px;
     border-right: 1px solid #fff;
 }
 
-.footer-list li:last-of-type {
-    border-right: 0;
+.footLi:hover {
+    background: #ff5050;
 }
 
-.footer-list a {
-    text-decoration: none;
-    padding: 0 20px;
-    text-align: center;
-    color: white;
+.footLi:last-child {
+    border-right: 1px solid transparent;
+}
 
+.footLink {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footNav::after {
+    content: '';
+    clear: both;
+    display: table;
 }
