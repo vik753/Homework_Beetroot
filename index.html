@@ -4,67 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800,900|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Grid</title>
 </head>
 
 <body>
-    <header>
-        <p>Float blocks with Flex align</p>
-    </header>
+    <div class="col-12 main-container">
+        <header class="header clearfix">
+            <div class="col-3 header__title-box">
+                <h1 class="title">ProductMan</h1>
+            </div>
+            <div class="col-4 header__nav-box">
+                <ul class="nav  right-wall">
+                    <li class="nav__li1">
+                        <a href="#" class="nav__li1__link1">Recent Work</a>
+                    </li>
+                    <li class="nav__li2">
+                        <a href="#" class="nav__li2__link2">Featured product</a>
+                    </li>
+                    <li class="nav__li3">
+                        <a href="#" class="nav__li3__link3"></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
 
-    <div class="container clearfix">
-        <div class="flex-box-1-1">
-            <p>600*150</p>
-        </div>
-        <div class="flex-box-1-2">
-            <p>600*150</p>
-        </div>
-        <div class="flex-box-2-1">
-            <p>600*300</p>
-        </div>
-        <div class="flex-box-2-2">
-            <p>193.34*150</p>
-        </div>
-        <div class="flex-box-2-3">
-            <p>193.34*150</p>
-        </div>
-        <div class="flex-box-2-4">
-            <p>193.34*145</p>
-        </div>
-        <div class="flex-box-2-5">
-            <p>295*145</p>
-        </div>
-        <div class="flex-box-2-6">
-            <p>295*145</p>
-        </div>
-        <div class="flex-box-3-1">
-            <p>400*185</p>
-        </div>
-        <div class="flex-box-3-2">
-            <p>400*185</p>
-        </div>
-        <div class="flex-box-3-3">
-            <p>190*185</p>
-        </div>
-        <div class="flex-box-3-4">
-            <p>190*185</p>
-        </div>
-        <div class="flex-box-4-1">
-            <p>200*145</p>
-        </div>
-        <div class="flex-box-4-2">
-            <p>600*145</p>
-        </div>
-        <div class="flex-box-4-3">
-            <p>390*145</p>
-        </div>
+        <main class="col-12 main clearfix">
+            <article class="col-6 article">
+                <p class="article__title first-layer">BLACK&</p>
+                <p class="article__title second-layer">WHITE</p>
+                <p class="article__context">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam</p>
+                <a class="article__link" href="#">View project</a>
+            </article>
+            <div class="col-1 empty-block"></div>
+            <div class="col-4 img-box">
+                <img src="img/headphones.png" alt="headphones">
+            </div>
+        </main>
+
+        <footer class="footer">
+
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; All rights reserved.</p>
-    </footer>
-
 </body>
 
 </html>
