@@ -5,16 +5,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #eee;
 }
 
 .clearfix::after {
     content: '';
     clear: both;
     display: table;
-}
-
-.body {
-    background: #efefef;
 }
 
 .main-container {
@@ -27,7 +24,6 @@
 .header {
     padding-top: 40px;
     height: 189px;
-    border: 1px solid green;
 }
 
 .header__title-box {
@@ -36,6 +32,7 @@
 
 .title {
     font-size: 48px;
+    color: #303030;
 }
 
 .header__nav-box {
@@ -48,7 +45,7 @@
 }
 
 [class^="nav__li"] {
-    font-size: 15px;
+    font-size: 18px;
     display: inline-block;
     padding-top: 13px;
     text-decoration: none;
@@ -77,26 +74,103 @@
     font-family: 'Raleway';
     font-weight: 900;
     font-size: 150px;
-    line-height: 150px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #303030;
 }
 
 .article__context {
     padding-top: 27px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    color: rgb(48, 48, 48);
+    line-height: 1.5;
 }
 
 .article__link {
-    padding-top: 20px;
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 24px;
+    font-family: "Roboto";
+    color: rgb(225, 0, 17);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
 }
 
 .empty-block {
-    width: 50px;
-    height: 50px;
-    float: left;
-
+    height: 1px;
+    float: left; //margin-left: 31.5px;
 }
 
 .img-box {
     float: left;
+}
+
+/*--three points---*/
+
+.three-points {
+    text-align: center;
+}
+
+.point1,
+.point2,
+.point3 {
+    display: inline-block;
+    border-radius: 50%;
+    background: #303030;
+    margin-top: 70px;
+    margin-right: 3px;
+    width: 11px;
+    height: 11px;
+}
+
+.point3 {
+    margin-right: 0;
+}
+
+[class^="point"]:hover {
+    background: rgb(225, 0, 17);
+    cursor: pointer;
+}
+
+/*--main -- Galarry--*/
+
+.gallery {
+    margin-top: 100px;
+    background: #ffffff;
+}
+
+.gallary__article {
+    position: relative;
+}
+
+[class^="gallary__article"] {
+    background: #ffffff;
+}
+
+.gallary__article_title {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Raleway";
+    color: rgb(48, 48, 48);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.gallary__article_star {
+    padding-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallary__article_text {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Raleway";
+    color: rgb(48, 48, 48);
+    line-height: 1.333;
 }

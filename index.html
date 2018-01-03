@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="col-12 main-container">
+    <div class="col-12 main-container clearfix">
         <header class="header clearfix">
             <div class="col-3 header__title-box">
                 <h1 class="title">ProductMan</h1>
@@ -22,7 +22,7 @@
                         <a href="#" class="nav__li1__link1">Recent Work</a>
                     </li>
                     <li class="nav__li2">
-                        <a href="#" class="nav__li2__link2">Featured product</a>
+                        <a href="#" class="nav__li2__link2">Featured Product</a>
                     </li>
                     <li class="nav__li3">
                         <a href="#" class="nav__li3__link3"></a>
@@ -32,15 +32,37 @@
         </header>
 
         <main class="col-12 main clearfix">
-            <article class="col-6 article">
-                <p class="article__title first-layer">BLACK&</p>
-                <p class="article__title second-layer">WHITE</p>
+            <article class="col-6 article clearfix">
+                <p class="article__title first-layer">black&</p>
+                <p class="article__title second-layer">white</p>
                 <p class="article__context">Lorem ipsum dolor sit amet, consectetur adipisicing<br> elit sed do eiusmod tempor incididunt ut labore et<br> dolore magna aliqua. Ut enim ad minim veniam</p>
                 <a class="article__link" href="#">View project</a>
             </article>
-            <div class="col-1 empty-block"></div>
-            <div class="col-4 img-box">
-                <img src="img/headphones.png" alt="headphones">
+            <div class="clearfix">
+                <div class="col-1 empty-block"></div>
+                <div class="col-4 img-box">
+                    <img src="img/headphones.png" alt="headphones">
+                </div>
+            </div>
+
+            <div class="col-12 three-points">
+                <div class="point1">
+                    <a href="#" class="point1__a1"></a>
+                </div>
+                <div class="point2">
+                    <a href="#" class="point2__a2"></a>
+                </div>
+                <div class="point3">
+                    <a href="#" class="point3__a3"></a>
+                </div>
+            </div>
+
+            <div class="col-12 gallery">
+                <article class="col-12 gallary__article">
+                    <h2 class="gallary__article_title">Featured Product</h2>
+                    <img class="gallary__article_star" src="img/underline.png" alt="star">
+                    <p class="gallary__article_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do<br> eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                </article>
             </div>
         </main>
 
