@@ -453,3 +453,8 @@
 .rightsText-company:hover {
     color: #333;
 }
+
+.icon-facebook:before {
+    content: "\e900";
+    color: #3b5998;
+}
