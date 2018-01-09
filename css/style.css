@@ -61,7 +61,11 @@
     float: right;
 }
 
-.nav__li3__link3::before {
+[class^="nav__li__link"]:hover {
+    color: tomato;
+}
+
+.nav__li__link3::before {
     content: '\2261';
     font-weight: bold;
 }
@@ -100,6 +104,10 @@
     line-height: 1.5;
     text-align: left;
     text-decoration: none;
+}
+
+.main__article__link:hover {
+    color: tomato;
 }
 
 .empty-block {
@@ -389,6 +397,7 @@
     background: #fff;
     margin-left: 20px;
     position: relative;
+    border: 1px solid transparent;
 }
 
 .footer__social-link:hover {
