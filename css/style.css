@@ -387,46 +387,68 @@
 }
 
 .footer__social {
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer__social-link {
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 71px;
     height: 71px;
     border-radius: 50%;
     background: #fff;
     margin-left: 20px;
-    position: relative;
     border: 1px solid transparent;
 }
 
-.footer__social-link:hover {
-    border: 1px solid tomato;
+[class$="-link"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #fff;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
 }
 
-.facebook-ico,
-.twitter-ico,
-.youtoube-ico,
-.m-ico {
-    background-color: #fff;
-    vertical-align: bottom;
-    position: absolute;
-    left: 20px;
-    top: 17px;
+[class^="icon-"] {
+    color: #979797;
+    background: #fff;
+    font-size: 33px;
+    border-radius: 50%;
+    padding: 20px;
 }
 
-.facebook-ico {
-    left: 27px;
-    top: 19px;
+.icon-youtube2 {
+    font-size: 20px;
+    padding: 12px;
+    line-height: 50px;
+    border-radius: 50%;
 }
 
-.twitter-ico {
-    left: 23px;
-    top: 23px;
+.icon-facebook2:hover {
+    color: #3b5998;
+    border: 1px solid #3b5998;
+}
+
+.icon-twitter2:hover {
+    color: #1da1f2;
+    border: 1px solid #1DA1F2;
+}
+
+.icon-google-plus:hover {
+    color: #CD201F;
+    border: 1px solid #CD201F;
+}
+
+.icon-youtube2:hover {
+    color: #CD201F;
+    border: 1px solid #CD201F;
 }
 
 /*--footer rights --*/
@@ -452,9 +474,4 @@
 
 .rightsText-company:hover {
     color: #333;
-}
-
-.icon-facebook:before {
-    content: "\e900";
-    color: #3b5998;
 }
