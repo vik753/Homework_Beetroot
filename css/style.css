@@ -354,6 +354,10 @@
     cursor: pointer;
 }
 
+.input-submit:hover {
+    color: #333;
+}
+
 .input-submit__triangle {
     background: #e10011;
     width: 15px;
@@ -401,7 +405,7 @@
 }
 
 .footer__social-link:hover {
-    border: 1px solid #999;
+    border: 1px solid tomato;
 }
 
 .facebook-ico,
