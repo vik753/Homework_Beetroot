@@ -89,6 +89,14 @@
     transition-duration: 0.2s;
 }
 
+/*--section separator--*/
+.sectionSeparator {
+    max-width: 1170px;
+    height: 2px;
+    margin: 120px auto;
+    background: #dddddd;
+}
+
 /*--Header--*/
 
 .header {
@@ -97,7 +105,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    z-index: 1;
 }
 
 .header-wrapper {
@@ -133,7 +140,6 @@
     font-weight: 600;
     text-transform: uppercase;
     flex: none;
-    z-index: 2;
 }
 
 .link-logo:hover {
@@ -144,7 +150,6 @@
     box-shadow: 0 0 40px #fff;
     text-shadow: -1px 0 #999, 0 1px #999, 1px 0 #999, 0 -1px #999,
     2px 2px 2px rgba(255, 255, 255, 1), 3px 3px 2px rgba(0, 0, 0, 0.5);
-    z-index: 2;
 }
 
 /*--header-nav--*/
@@ -195,7 +200,7 @@
     3px 3px 2px rgba(0, 0, 0, 0.5);
 }
 
-/*---content---*/
+/*--header-content---*/
 
 .content-wrapper {
     position: absolute;
@@ -223,7 +228,7 @@
     font-weight: 600;
 }
 
-/*--button--*/
+/*-header-button--*/
 
 .button-wrapper {
     display: flex;
@@ -246,8 +251,309 @@
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
     background: #19CD08;
     text-shadow: -1px 0 #999, 0 -1px #999,
-    1px 0 #999,  0 1px #999;
+    1px 0 #999, 0 1px #999;
 }
+
+.slider-wrapper {
+    max-width: 1170px;
+    margin: 950px auto 0;
+}
+
+.slider-wrap-box {
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+}
+
+[class^="slider-link"] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+[class^="slider-link"]:hover {
+    background: #19CD08;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*--main--*/
+/*--about--*/
+
+.about-wrapper {
+    max-width: 1170px;
+    margin: 110px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 65px;
+}
+
+.about-caption {
+    text-transform: uppercase;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.about-separator {
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background: #f4a10e;
+    margin: 0 20px 0 20px;
+}
+
+.about-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/*--our story--*/
+
+.ourStory-wrapper {
+    max-width: 1170px;
+    margin: 150px auto 0;
+    display: flex;
+}
+
+.logo-wrapper {
+    padding: 7px 0 0;
+}
+
+.logo-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    border: 2px solid #f4a10e;
+    border-radius: 50%;
+}
+
+.fa-lightbulb {
+    font-size: 35px;
+    color: #f4a10e;
+}
+
+.logo-circle:hover > .fa-lightbulb {
+    transform: rotateY(360deg);
+    transition-duration: 2s;
+}
+
+.article-wrapper {
+    height: 255px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 60px;
+}
+
+.ourStory-caption {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.our-story-caption--2 {
+    font-size: 20px;
+    font-weight: 200;
+    color: #f4a10e;
+}
+
+.ourStory-text {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.img-wrapper {
+    width: 450px;
+    height: 255px;
+    background: #19CD08;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.fa-camera {
+    font-size: 35px;
+    color: #fff;
+
+}
+
+.img-wrapper:hover > .fa-camera {
+    transform: rotateY(360deg);
+    transition-duration: 2s;
+}
+
+/*---OUR SKILLS---*/
+
+.our-skills-wrapper {
+    display: flex;
+    max-width: 1170px;
+    height: 490px;
+    margin: 0 auto;
+}
+
+.our-skills__img-wrapper {
+    width: 50%;
+}
+
+.our-skills-block-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.our-skills__context-wrapper {
+
+    display: flex;
+}
+
+.context__partOne--logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    border: 2px solid #f4a10e;
+    border-radius: 50%;
+}
+
+.fa-sliders-h {
+    font-size: 30px;
+    color: #F4A10E;
+    transform: rotateZ(90deg);
+}
+
+.context__partOne--logo:hover > .fa-sliders-h {
+    transform: rotateZ(360deg);
+    transition-duration: 2s;
+}
+
+.our-skills-context__partTwo {
+    padding-left: 30px;
+
+}
+
+.our-skills__article--title {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.our-skills__article--text {
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/*--our skills - rating---*/
+
+.our-skills-context__partThree {
+    padding: 65px 0 0;
+}
+
+.partThree--rate-wrap {
+    margin-bottom: 40px;
+}
+
+.partThree--rate-wrap:last-of-type {
+    margin-bottom: 0;
+}
+
+.rate-caption {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.rate-percent-background {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 100%;
+    height: 10px;
+    margin-top: 10px;
+    background: #e6e6e6;
+}
+
+.rate-percent-state--design {
+    background: #f39c12;
+    width: 88%;
+    height: 10px;
+}
+
+.rate-percent-state--development {
+    background: #f39c12;
+    width: 76%;
+    height: 10px;
+}
+
+.rate-percent-state--wordpress {
+    background: #f39c12;
+    width: 81%;
+    height: 10px;
+}
+
+.rate-percent-state--drupal {
+    background: #f39c12;
+    width: 71%;
+    height: 10px;
+}
+
+.rate-percent {
+    background: #f39c12;
+    width: 0;
+    height: 10px;
+}
+
+/*---hover ratings section---*/
+
+.our-skills-context__partThree:hover .rate-percent--design {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 88%;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--design{
+    width: 0;
+}
+
+.our-skills-context__partThree:hover .rate-percent--development {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 76%;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--development{
+    width: 0;
+}
+
+.our-skills-context__partThree:hover .rate-percent--wordpress {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 81%;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--wordpress{
+    width: 0;
+}
+
+.our-skills-context__partThree:hover .rate-percent--drupal {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 71%;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--drupal{
+    width: 0;
+}
+
+
+
+
 
 
 

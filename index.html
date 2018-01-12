@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.css">
+    <link rel="stylesheet" href="fonts/fontawesome-free-5.0.4/web-fonts-with-css/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>myTest-Mini</title>
 </head>
@@ -33,8 +35,152 @@
         <div class="button-wrapper">
             <a class="button" href="#">Learn more</a>
         </div>
-
+    </div>
+    <div class="slider-wrapper">
+        <div class="slider-wrap-box">
+            <a href="#" class="slider-link1"></a>
+            <a href="#" class="slider-link2"></a>
+            <a href="#" class="slider-link3"></a>
+        </div>
     </div>
 </header>
+<main class="main">
+    <!--ABOUT-->
+    <div class="about-wrapper">
+        <div class="about-caption-wrap">
+            <h2 class="about-caption">About</h2>
+        </div>
+        <div class="about-separator"></div>
+        <div class="about-text-wrap">
+            <p class="about-text">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
+                auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
+                cursus a sit amet </p>
+        </div>
+    </div>
+    <!--OUR STORY-->
+    <div class="ourStory-wrapper">
+        <div class="logo-wrapper">
+            <div class="logo-circle">
+                <i class="fa fa-lightbulb" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="article-wrapper">
+            <h3 class="ourStory-caption">Our story</h3>
+            <h4 class="our-story-caption--2">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                nec sagittis sem nibh id elit.</h4>
+            <p class="ourStory-text">Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae
+                erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos.</p>
+        </div>
+        <div class="img-wrapper">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!--section separator-->
+    <div class="sectionSeparator"></div>
+    <!--OUR SKILLS-->
+    <div class="our-skills-wrapper">
+        <div class="our-skills__img-wrapper">
+            <img class="our-skills-img" src="img/iphoneIpad.png" alt="gadgets">
+        </div>
+        <div class="our-skills-block-wrapper">
+            <div class="our-skills__context-wrapper">
+                <div class="our-skills-context__partOne">
+                    <div class="context__partOne--logo">
+                        <i class="fa fa-sliders-h" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="our-skills-context__partTwo">
+                    <div class="context__partTwo--article">
+                        <h3 class="our-skills__article--title">Our skills</h3>
+                        <p class="our-skills__article--text">Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                            Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="our-skills-context__partThree">
+                <div class="partThree--rate-wrap">
+                    <h4 class="rate-caption">Design / 88%</h4>
+                    <div class="rate-percent-background rate-percent-background--design">
+                        <div class="rate-percent-state--design"></div>
+                        <div class="rate-percent rate-percent--design"></div>
+                    </div>
+                </div>
+                <div class="partThree--rate-wrap">
+                    <h4 class="rate-caption">Development / 76%</h4>
+                    <div class="rate-percent-background rate-percent-background--development">
+                        <div class="rate-percent-state--development"></div>
+                        <div class="rate-percent rate-percent--development"></div>
+                    </div>
+                </div>
+                <div class="partThree--rate-wrap">
+                    <h4 class="rate-caption">Wordpress / 81%</h4>
+                    <div class="rate-percent-background rate-percent-background--wordpress">
+                        <div class="rate-percent-state--wordpress"></div>
+                        <div class="rate-percent rate-percent--wordpress"></div>
+                    </div>
+                </div>
+                <div class="partThree--rate-wrap">
+                    <h4 class="rate-caption">Drupal / 71%</h4>
+                    <div class="rate-percent-background rate-percent-background--drupal">
+                        <div class="rate-percent-state--drupal"></div>
+                        <div class="rate-percent rate-percent--drupal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        /*--first layer--*/
+
+.our-skills-context__partThree:hover .rate-percent-state--design{
+    width: 0;
+    transition-duration: 3s;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--development{
+    width: 0;
+    transition-duration: 3s;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--wordpress{
+    width: 0;
+    transition-duration: 3s;
+}
+
+.our-skills-context__partThree:hover .rate-percent-state--drupal{
+    width: 0;
+    transition-duration: 3s;
+}
+
+/*--second layer--*/
+
+.our-skills-context__partThree:hover .rate-percent--design {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 88%;
+}
+
+.our-skills-context__partThree:hover .rate-percent--development {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 76%;
+}
+.our-skills-context__partThree:hover .rate-percent--wordpress {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 81%;
+}
+.our-skills-context__partThree:hover .rate-percent--drupal {
+    transition-duration: 3s;
+    background: #f39c12;
+    width: 71%;
+}
+        -->
+
+    </div>
+</main>
 </body>
 </html>
