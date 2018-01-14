@@ -1,0 +1,18 @@
+===Sprite value=============
+logo-button   w-169 h-61 x-0 y-0
+home          w-37 h-38 x-0 y-65
+camera        w-37 h-36 x-0 y-107
+cloudX        w-35 h-31 x-0 y-147
+lens          w-43 h-43 x-0 y-182
+cloud         w-43 h-38 x-0 y-229
+point-big     w-19 h-19 x-3 y-271
+pointer-left  w-28 h-19 x-0 y-294
+pointer-right w-28 h-19 x-1 y-317
+point-small   w-13 h-13 x-3 y-340
+pencil        w-38 h-38 x-0 y-357
+button-big    w-203 h-52 x-0 y-398
+
+======hover==============
+home          w-37 h-38 x-65 y-173
+camera        w-37 h-36 x-65 y-215
+cloudX        w-35 h-31 x-65 y-255
