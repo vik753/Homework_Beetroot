@@ -11,6 +11,7 @@ pointer-right w-28 h-19 x-1 y-317
 point-small   w-13 h-13 x-3 y-340
 pencil        w-38 h-38 x-0 y-357
 button-big    w-203 h-52 x-0 y-398
+beard         w-86 h-102 x-44 y-65
 
 ======hover==============
 home          w-37 h-38 x-65 y-173
