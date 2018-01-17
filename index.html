@@ -6,103 +6,159 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="main-wrapper clearfix">
-    <header class="header-top clearfix">
-        <div class="header-top-wrapper clearfix">
-            <div class="header-logo-wrapper clearfix">
-                <h1 class="header-logo">Welcome in our page!</h1>
-                <h2 class="header-logo-text">Logo</h2>
-            </div><!--header-logo-wrapper-->
-            <div class="header-menu-wrapper clearfix">
-                <nav class="menu-top">
-                    <ul class="menu-top-list">
-                        <li class="menu-top-item">
-                            <a href="#" class="menu-top-link menu-top-link__home">Home</a>
-                        </li>
-                        <li class="menu-top-item">
-                            <a href="#" class="menu-top-link menu-top-link__about">About</a>
-                        </li>
-                        <li class="menu-top-item">
-                            <a href="#" class="menu-top-link menu-top-link__contact">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div><!--header-menu-wrapper-->
-            <div class="header-search-wrapper">
-                <form action="#" class="header-searchForm">
-                    <input type="text" class="header-searchField" placeholder="Search">
-                </form>
-            </div><!--header-search-wrapper-->
-        </div><!--header-top-wrapper-->
-        <div class="header-welcome-wrapper">
-            <h2 class="header-welcome">Welcome to my blog</h2>
-        </div><!--header-welcome-wrapper-->
+<div class="main-wrapper">
+    <header class=" header-top-wrapper">
+        <div class="header-top__logo-wrapper">
+            <h1 class="header-top_title">Welcome in our page!</h1>
+            <span class="header-top__logo">Logo</span>
+        </div>
+        <!-- header-top__logo-wrapper -->
+        <div class="header-top__nav-wrapper">
+            <nav class="header-top-nav">
+                <ul class="top-nav-list">
+                    <li class="top-nav-item">
+                        <a href="#" class="top-nav-link top-nav-link__home">Home</a>
+                    </li>
+                    <li class="top-nav-item">
+                        <a href="#" class="top-nav-link top-nav-link__about">About</a>
+                    </li>
+                    <li class="top-nav-item">
+                        <a href="#" class="top-nav-link top-nav-link__contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- header-top__nav-wrapper -->
+        <div class="header-top__search-wrapper">
+            <form action="" class="top-search-form">
+                <input type="text" class="top-search-input" placeholder="Search">
+            </form>
+        </div>
+        <!-- header-top__search-wrapper -->
     </header>
-    <main class="main clearfix">
-        <div class="main-left-wrapper">
-            <div class="main-left-block clearfix">
-                <div class="img-wrapper">
-                    <img class="left-block__img left-block__img--bridge" src="img/bridge.jpg" alt="bridge">
-                </div><!--img-wrapper-->
-                <article class="article">
-                    <h2 class="left-block__title">Article 1</h2>
-                    <div class="left-block__date">4 December 2010</div>
-                    <p class="left-block__text">Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus, virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius pneum reprobo letalis vindico duis elit. <span class="left-block__text--readmore"><a
-                            href="#">Read more</a></span>...</p>
-                </article>
-            </div><!--main-left-block-->
-            <div class="main-left-block main-left-block--two clearfix">
-                <div class="img-wrapper">
-                    <img class="left-block__img left-block__img--bridge" src="img/JQuery.jpg" alt="bridge">
-                </div><!--img-wrapper-->
-                <article class="article">
-                    <h2 class="left-block__title">Article 2</h2>
-                    <div class="left-block__date">3 December 2010</div>
-                    <p class="left-block__text">Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus, virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius pneum reprobo letalis vindico duis elit. <span class="left-block__text--readmore"><a
-                            href="#">Read more</a></span>...</p>
-                </article>
-            </div><!--main-left-block-->
-            <div class="main-left-block main-left-block--three clearfix">
-                <div class="img-wrapper">
-                    <img class="left-block__img left-block__img--bridge" src="img/bee.jpg" alt="bridge">
-                </div><!--img-wrapper-->
-                <article class="article">
-                    <h2 class="left-block__title">Article 3</h2>
-                    <div class="left-block__date">2 December 2010</div>
-                    <p class="left-block__text">Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus, virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius pneum reprobo letalis vindico duis elit. <span class="left-block__text--readmore"><a
-                            href="#">Read more</a></span>...</p>
-                </article>
-            </div><!--main-left-block-->
-            <a class="main-btn-left" href="#">More articles</a>
-        </div><!--main-left-wrapper-->
-        <div class="main-right-wrapper">
-            <div class="main-right-block">
-                <div class="right-block--title">Random photo</div>
-                <img src="img/trees.jpg" alt="landscape" class="right-block--img">
-                <a href="" class="right-block--seeAlbum">See album</a>
-                <a class="right-block--rightLeft" href="#"></a>
-            </div><!--main-right-block-->
-            <div class="main-right-block main-right-block-pencil">
-                <div class="right-block--title">Blog posts</div>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-            </div><!--main-right-block-->
-            <div class="main-right-block main-right-block-pencil">
-                <div class="right-block--title">Blog posts</div>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-                <a href="#" class="right-block--posts">Some entry will go right here</a>
-            </div><!--main-right-block-->
-            <a class="main-btn-right" href="#">Follow</a>
-        </div><!--main-right-wrapper-->
-    </main>
-</div><!--main-wrapper-->
+    <div class="header-top-welcome-wrapper">
+        <h2 class="header-top-welcome">Welcome in my blog</h2>
+    </div>
+    <!-- /.header-top-welcome-wrapper -->
+    <!-- /.header-top -->
+    <div class="context-wrapper">
+        <main class="context-wrapper__box articles-wrapper">
+            <div class="articles-wrapper__item">
+                <img src="img/bridge.jpg" alt="bridge" class="article-img">
+                <div class="text-wrapper">
+                    <h3 class="context-title">Article 1</h3>
+                    <div class="context-date">
+                        <span class="context-date__text">4 December 2017</span>
+                    </div>
+                    <!--context-date-->
+                    <p class="context-p">
+                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
+                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
+                        pneum reprobo letalis vindico duis elit.<br>
+                        <a href="#" class="context-link">Read more...</a>
+                    </p>
+                </div>
+                <!--text-wrapper-->
+            </div>
+            <!--articles-wrapper__item-->
+
+            <div class="articles-wrapper__item articles-wrapper__item--two">
+                <img src="img/JQuery.jpg" alt="bridge" class="article-img">
+                <div class="text-wrapper">
+                    <h3 class="context-title">Article 2</h3>
+                    <div class="context-date">
+                        <span class="context-date__text">5 December 2017</span>
+                    </div>
+                    <!--context-date-->
+                    <p class="context-p">
+                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
+                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
+                        pneum reprobo letalis vindico duis elit.<br>
+                        <a href="#" class="context-link">Read more...</a>
+                    </p>
+                </div>
+                <!--text-wrapper-->
+            </div>
+            <!--articles-wrapper__item-->
+
+            <div class="articles-wrapper__item  articles-wrapper__item--three">
+                <img src="img/bee.jpg" alt="bridge" class="article-img">
+                <div class="text-wrapper">
+                    <h3 class="context-title">Article 3</h3>
+                    <div class="context-date">
+                        <span class="context-date__text">6 December 2017</span>
+                    </div>
+                    <!--context-date-->
+                    <p class="context-p">
+                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
+                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
+                        pneum reprobo letalis vindico duis elit.<br>
+                        <a href="#" class="context-link">Read more...</a>
+                    </p>
+                </div>
+                <!--text-wrapper-->
+            </div>
+            <!--articles-wrapper__item-->
+            <div class="button-wrapper">
+                <button class="btn-moreArticles">More articles</button>
+            </div>
+        </main>
+        <!-- /.articles-wrapper -->
+
+        <aside class="context-wrapper__box aside-wrapper">
+            <div class="aside-wrapper-box">
+                <div class="aside-title-wrap">
+                    <h3 class="aside-title">Random photo</h3>
+                </div><!--aside-title-wrap-->
+                <div class="aside-img-wrap"></div>
+                <div class="aside-footer-wrap">
+                    <div class="aside-seeAlbum"><a href="#">See album</a></div>
+                    <div class="aside-directions">
+                        <a href="#" class="aside-left"></a>
+                        <a href="#" class="aside-right"></a>
+                    </div><!--aside-footer-wrap-->
+                </div><!--aside-footer-wrap-->
+            </div><!--aside-wrapper-box-->
+
+            <div class="aside-wrapper-box">
+                <div class="aside-title-wrap">
+                    <h3 class="aside-title">Blogs entry</h3>
+                </div><!--aside-title-wrap-->
+                <div class="aside-entries">
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                </div><!--aside-entries-->
+            </div><!--aside-wrapper-box-->
+
+            <div class="aside-wrapper-box">
+                <div class="aside-title-wrap">
+                    <h3 class="aside-title">Blogs entry</h3>
+                </div><!--aside-title-wrap-->
+                <div class="aside-entries">
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
+                </div><!--aside-entries-->
+            </div><!--aside-wrapper-box-->
+            <span class="button-twitter-wrap">
+                <a class="button-twitter__link" href="#">Follow</a>
+            </span>
+        </aside>
+        <!-- /.aside-wrapper -->
+    </div>
+    <!-- /.context-wrapper -->
+</div>
+<!-- /.main-wrapper -->
+<footer class="footer-wrapper">
+    <p class="footer-text">&copy; All rights reserved.<br>January 2018</p>
+</footer>
+<!-- /.footer-wrapper -->
 </body>
 </html>
