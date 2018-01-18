@@ -3,162 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="main-wrapper">
-    <header class=" header-top-wrapper">
-        <div class="header-top__logo-wrapper">
-            <h1 class="header-top_title">Welcome in our page!</h1>
-            <span class="header-top__logo">Logo</span>
-        </div>
-        <!-- header-top__logo-wrapper -->
-        <div class="header-top__nav-wrapper">
-            <nav class="header-top-nav">
-                <ul class="top-nav-list">
-                    <li class="top-nav-item">
-                        <a href="#" class="top-nav-link top-nav-link__home">Home</a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#" class="top-nav-link top-nav-link__about">About</a>
-                    </li>
-                    <li class="top-nav-item">
-                        <a href="#" class="top-nav-link top-nav-link__contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- header-top__nav-wrapper -->
-        <div class="header-top__search-wrapper">
-            <form action="" class="top-search-form">
-                <input type="text" class="top-search-input" placeholder="Search">
-            </form>
-        </div>
-        <!-- header-top__search-wrapper -->
-    </header>
-    <div class="header-top-welcome-wrapper">
-        <h2 class="header-top-welcome">Welcome in my blog</h2>
+<footer class="top-footer">
+    <div class="logo-wrapper"></div>
+    <div class="nav-wrapper">
+        <nav class="top-nav">
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu">
+                <i class="fa fa-bars"> Menu</i>
+            </label>
+            <ul class="top-menu">
+                <li class="top-menu__item">
+                    <a href="#" class="top-menu__link">
+                        <i class="top-menu__ico fa fa-home"></i>
+                        Main</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#" class="top-menu__link">
+                        <i class="top-menu__ico fa  fa-shopping-cart"></i>Production</a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Computers</a>
+                            <ul class="sub-sub-menu">
+                                <li class="sub-sub-menu__item">
+                                    <a href="#" class="sub-sub-menu__link">Standalone</a>
+                                </li>
+                                <li class="sub-sub-menu__item">
+                                    <a href="#" class="sub-sub-menu__link">LapTop</a>
+                                </li>
+                                <li class="sub-sub-menu__item">
+                                    <a href="#" class="sub-sub-menu__link">Terminal</a>
+                                </li>
+                                <li class="sub-sub-menu__item">
+                                    <a href="#" class="sub-sub-menu__link">Server</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">CellPhones</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Printers</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Periphery</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#" class="top-menu__link fa fa-cogs">
+                        <i class="top-menu__ico"></i>Services</a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Support</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Guaranty</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#" class="top-menu__link">
+                        <i class="top-menu__ico fa fa-th-list"></i>News</a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Our Blog</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Articles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#" class="top-menu__link">
+                        <i class="top-menu__ico fa fa-envelope-open"></i>Contacts</a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Main office</a>
+                        </li>
+                        <li class="sub-menu__item">
+                            <a href="#" class="sub-menu__link">Sale points</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <!-- /.header-top-welcome-wrapper -->
-    <!-- /.header-top -->
-    <div class="context-wrapper">
-        <main class="context-wrapper__box articles-wrapper">
-            <div class="articles-wrapper__item">
-                <img src="img/bridge.jpg" alt="bridge" class="article-img">
-                <div class="text-wrapper">
-                    <h3 class="context-title">Article 1</h3>
-                    <div class="context-date">
-                        <span class="context-date__text">4 December 2017</span>
-                    </div>
-                    <!--context-date-->
-                    <p class="context-p">
-                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
-                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
-                        pneum reprobo letalis vindico duis elit.<br>
-                        <a href="#" class="context-link">Read more...</a>
-                    </p>
-                </div>
-                <!--text-wrapper-->
-            </div>
-            <!--articles-wrapper__item-->
-
-            <div class="articles-wrapper__item articles-wrapper__item--two">
-                <img src="img/JQuery.jpg" alt="bridge" class="article-img">
-                <div class="text-wrapper">
-                    <h3 class="context-title">Article 2</h3>
-                    <div class="context-date">
-                        <span class="context-date__text">5 December 2017</span>
-                    </div>
-                    <!--context-date-->
-                    <p class="context-p">
-                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
-                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
-                        pneum reprobo letalis vindico duis elit.<br>
-                        <a href="#" class="context-link">Read more...</a>
-                    </p>
-                </div>
-                <!--text-wrapper-->
-            </div>
-            <!--articles-wrapper__item-->
-
-            <div class="articles-wrapper__item  articles-wrapper__item--three">
-                <img src="img/bee.jpg" alt="bridge" class="article-img">
-                <div class="text-wrapper">
-                    <h3 class="context-title">Article 3</h3>
-                    <div class="context-date">
-                        <span class="context-date__text">6 December 2017</span>
-                    </div>
-                    <!--context-date-->
-                    <p class="context-p">
-                        Lorem ipsum dolor sit amet, sit diam ut sed jus consequat nunc incassum fatua, sed genitus,
-                        virtus, saepius pagus. Autem bene ingenium aptent aliquam inhibeo, accumsan nonummy proprius
-                        pneum reprobo letalis vindico duis elit.<br>
-                        <a href="#" class="context-link">Read more...</a>
-                    </p>
-                </div>
-                <!--text-wrapper-->
-            </div>
-            <!--articles-wrapper__item-->
-            <div class="button-wrapper">
-                <button class="btn-moreArticles">More articles</button>
-            </div>
-        </main>
-        <!-- /.articles-wrapper -->
-
-        <aside class="context-wrapper__box aside-wrapper">
-            <div class="aside-wrapper-box">
-                <div class="aside-title-wrap">
-                    <h3 class="aside-title">Random photo</h3>
-                </div><!--aside-title-wrap-->
-                <div class="aside-img-wrap"></div>
-                <div class="aside-footer-wrap">
-                    <div class="aside-seeAlbum"><a href="#">See album</a></div>
-                    <div class="aside-directions">
-                        <a href="#" class="aside-left"></a>
-                        <a href="#" class="aside-right"></a>
-                    </div><!--aside-footer-wrap-->
-                </div><!--aside-footer-wrap-->
-            </div><!--aside-wrapper-box-->
-
-            <div class="aside-wrapper-box">
-                <div class="aside-title-wrap">
-                    <h3 class="aside-title">Blogs entry</h3>
-                </div><!--aside-title-wrap-->
-                <div class="aside-entries">
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                </div><!--aside-entries-->
-            </div><!--aside-wrapper-box-->
-
-            <div class="aside-wrapper-box">
-                <div class="aside-title-wrap">
-                    <h3 class="aside-title">Blogs entry</h3>
-                </div><!--aside-title-wrap-->
-                <div class="aside-entries">
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                    <a href="#" class="aside-entries__link">Some entry will go right here</a>
-                </div><!--aside-entries-->
-            </div><!--aside-wrapper-box-->
-            <span class="button-twitter-wrap">
-                <a class="button-twitter__link" href="#">Follow</a>
-            </span>
-        </aside>
-        <!-- /.aside-wrapper -->
-    </div>
-    <!-- /.context-wrapper -->
-</div>
-<!-- /.main-wrapper -->
-<footer class="footer-wrapper">
-    <p class="footer-text">&copy; All rights reserved.<br>January 2018</p>
 </footer>
-<!-- /.footer-wrapper -->
 </body>
 </html>
