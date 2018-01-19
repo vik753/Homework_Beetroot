@@ -1,98 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
     <link rel="stylesheet" href="css/style.css">
+    <title>ResponsibleFlexMenu</title>
 </head>
 <body>
-<footer class="top-footer">
-    <div class="logo-wrapper"></div>
-    <div class="nav-wrapper">
-        <nav class="top-nav">
-            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
-            <label for="menu" class="toggleMenu">
-                <i class="fa fa-bars"> Menu</i>
-            </label>
-            <ul class="top-menu">
-                <li class="top-menu__item">
-                    <a href="#" class="top-menu__link">
-                        <i class="top-menu__ico fa fa-home"></i>
-                        Main</a>
-                </li>
-                <li class="top-menu__item">
-                    <a href="#" class="top-menu__link">
-                        <i class="top-menu__ico fa  fa-shopping-cart"></i>Production</a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Computers</a>
-                            <ul class="sub-sub-menu">
-                                <li class="sub-sub-menu__item">
-                                    <a href="#" class="sub-sub-menu__link">Standalone</a>
-                                </li>
-                                <li class="sub-sub-menu__item">
-                                    <a href="#" class="sub-sub-menu__link">LapTop</a>
-                                </li>
-                                <li class="sub-sub-menu__item">
-                                    <a href="#" class="sub-sub-menu__link">Terminal</a>
-                                </li>
-                                <li class="sub-sub-menu__item">
-                                    <a href="#" class="sub-sub-menu__link">Server</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">CellPhones</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Printers</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Periphery</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="top-menu__item">
-                    <a href="#" class="top-menu__link fa fa-cogs">
-                        <i class="top-menu__ico"></i>Services</a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Support</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Guaranty</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="top-menu__item">
-                    <a href="#" class="top-menu__link">
-                        <i class="top-menu__ico fa fa-th-list"></i>News</a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Our Blog</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Articles</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="top-menu__item">
-                    <a href="#" class="top-menu__link">
-                        <i class="top-menu__ico fa fa-envelope-open"></i>Contacts</a>
-                    <ul class="sub-menu">
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Main office</a>
-                        </li>
-                        <li class="sub-menu__item">
-                            <a href="#" class="sub-menu__link">Sale points</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</footer>
+<div class="footer">
+    <div class="footer-logo"><h1 class="footer-title">Welcome in Perkins & Associates Company, law offices</h1></div>
+    <nav class="footer__menu">
+        <input type="checkbox" class="menu-top-mob" id="menu-top-mob">
+        <label for="menu-top-mob" class="menu-top-mob__label"><i class="menu-top-mob__ico fa fa-bars"></i><span>Menu</span></label>
+        <ul class="menu-top">
+            <li class="menu-top__item">
+                <a href="#" class="menu-top__link">
+                    <i class="menu-top__link--ico fa fa-home"></i>Main</a>
+            </li>
+            <li class="menu-top__item">
+                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-cogs"></i>Service</a>
+                <ul class="menu-top-sub">
+                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">law help</a></li>
+                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">divorce case</a></li>
+                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">inheritance case</a></li>
+                </ul>
+            </li>
+            <li class="menu-top__item">
+                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-th-list"></i>News</a>
+            </li>
+            <li class="menu-top__item">
+                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-envelope-open"></i>Contact</a>
+            </li>
+        </ul>
+    </nav>
+</div><!--/.footer-->
 </body>
 </html>
