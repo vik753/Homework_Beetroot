@@ -122,6 +122,11 @@ a {
     color: #8c8c88;
 }
 
+.serv-menu-top-mob,
+.serv-menu-top-mob__label{
+    display: none;
+}
+
 /*====menu-top-mob=====*/
 
 .menu-top-mob,
