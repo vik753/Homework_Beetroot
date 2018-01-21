@@ -1,42 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
+    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script> <!--font Awesome-->
     <link rel="stylesheet" href="css/style.css">
-    <title>ResponsibleFlexMenu</title>
+    <title>CNN - Breaking News, U.S., World, Weather, Entertainment & Video News</title>
+    <link rel="icon" href="img/cnnLogo.png">
 </head>
 <body>
-<div class="footer">
-    <div class="footer-logo"><h1 class="footer-title">Welcome in Perkins & Associates Company, law offices</h1></div>
-    <nav class="footer__menu">
-        <input type="checkbox" class="menu-top-mob" id="menu-top-mob">
-        <label for="menu-top-mob" class="menu-top-mob__label"><i class="menu-top-mob__ico fa fa-bars"></i><span>Menu</span></label>
-        <ul class="menu-top">
-            <li class="menu-top__item">
-                <a href="#" class="menu-top__link">
-                    <i class="menu-top__link--ico fa fa-home"></i>Main</a>
-            </li>
-            <li class="menu-top__item">
-                <input type="checkbox" class="serv-menu-top-mob" id="serv-menu-top-mob">
-                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-cogs"></i>Service</a>
-                <label for="serv-menu-top-mob" class="serv-menu-top-mob__label"><i class="serv-menu-top-mob__ico fa fa-bars"></i></label>
-                <ul class="menu-top-sub">
-                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">law help</a></li>
-                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">divorce case</a></li>
-                    <li class="menu-top-sub__item"><a href="#" class="menu-top-sub__link">inheritance case</a></li>
-                </ul>
-            </li>
-            <li class="menu-top__item">
-                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-th-list"></i>News</a>
-            </li>
-            <li class="menu-top__item">
-                <a href="#" class="menu-top__link"><i class="menu-top__link--ico fa fa-envelope-open"></i>Contact</a>
-            </li>
-        </ul>
-    </nav>
-</div><!--/.footer-->
+<div class="container-header">
+    <header class="header-top">
+        <h1 class="header-top__title">Welcome in CNN News page</h1><!--.header-top__title-->
+        <div class="logo-wrapper"></div><!--.logo-wrapper-->
+        <div class="home-wrapper">
+            <a href="#">Home</a>
+        </div><!--.home-wrapper-->
+        <div class="nav-wrapper">
+            <ul class="top-menu" id="top-menu">
+                <div class="top-search">
+                    <input type="text" placeholder="Search CNN...">
+                    <a href="#"><i class="top-search-ico fa fa-search"></i></a>
+                </div><!--.top-search-->
+                <div class="top-menu-item-wrapper">
+                    <li class="top-menu__item">
+                        <a href="http://edition.cnn.com/regions" class="top-menu__link" target="_blank">Regions</a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="http://edition.cnn.com/politics" class="top-menu__link" target="_blank">US Politics</a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="http://money.cnn.com/INTERNATIONAL/" class="top-menu__link" target="_blank">Money</a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="http://edition.cnn.com/sport" class="top-menu__link" target="_blank">Sport</a>
+                    </li>
+                    <li class="top-menu__item">
+                        <a href="http://edition.cnn.com/health" class="top-menu__link" target="_blank">Health</a>
+                    </li>
+                </div>
+            </ul><!--.top-menu-->
+        </div><!--.nav-wrapper-->
+    </header><!--.header-top-->
+    <div class="menu-icon" id="menu-icon">
+        <span></span><span></span><span></span>
+    </div>
+</div><!--.container-->
+
+<div class="main-container">
+    <div class="article-block-wrapper">
+        <div class="top-article">
+            <a href="http://edition.cnn.com/2018/01/21/middleeast/turkey-military-forces-enter-syria-intl/index.html"
+               target="_blank">
+                <h2 class="article__title">Turkey launches ground operation</h2>
+                <img class="article__img top-article__img" src="img/Turkish%20tanks.jpg">
+                <p class="article__text">Turkish military enters Syrian city after days of airstrikes</p>
+            </a>
+        </div><!--top-article-->
+        <div class="articles-wrapper">
+            <div class="article-wrapper">
+                <a href="http://edition.cnn.com/2018/01/20/politics/government-shutdown-daca-deal-developments/index.html"
+                   target="_blank">
+                    <h2 class=" article__title-articles">Shutdown statement</h2>
+                    <img class="article__img" src="img/article1.png">
+                    <p class="article__text article__text__articles">Acrimony deepens after government shutdown's first
+                        day</p>
+                </a>
+            </div><!--article-wrapper-->
+            <div class="article-wrapper">
+                <a href="http://edition.cnn.com/2018/01/19/sport/kyrgios-melbourne-kitzbuhel-french-rugby-north-korea-olympics-formula-e-5-things/index.html"
+                   target="_blank">
+                    <h2 class=" article__title-articles">Sport</h2>
+                    <img class="article__img" src="img/WSmith.png">
+                    <p class="article__text article__text__articles">Tennis' "bad boy" Nick Kyrgios did good in front of
+                        his home crowd at the Australian Open on Friday</p>
+                </a>
+            </div><!--article-wrapper-->
+            <div class="article-wrapper">
+                <a href="http://edition.cnn.com/2018/01/21/sport/russian-doping-athletes-cas-appeal-olympics/index.html"
+                   target="_blank">
+                    <h2 class=" article__title-articles">Top stories</h2>
+                    <img class="article__img" src="img/sportArticle.png">
+                    <p class="article__text article__text__articles">Meet the Russian Winter Olympians fighting to clear
+                        their names</p>
+                </a>
+            </div><!--article-wrapper-->
+
+            <div class="aside-block">
+                <div class="aside-article-wrapper">
+                    <a href="http://edition.cnn.com/travel/article/princess-grace-suite-monte-carlo/index.html"
+                       class="aside-article__link" target="_blank">
+                        <img class="aside-img" src="img/aside1.png">
+                        <h3 class="aside-title">Monaco's $48,000-a-night hotel suit</h3>
+                    </a>
+                </div>
+                <div class="aside-article-wrapper">
+                    <a href="http://edition.cnn.com/2018/01/11/sport/gabart-francois-sailing-world-record-icebergs-technology/index.html"
+                       class="aside-article__link" target="_blank">
+                        <img class="aside-img" src="img/aside2.png">
+                        <h3 class="aside-title">How to sail around the world</h3>
+                    </a>
+                </div>
+                <div class="aside-article-wrapper">
+                    <a href="http://edition.cnn.com/style/article/sihh-2018-watches-innovation-technology/index.html"
+                       target="_blank" class="aside-article__link">
+                        <img class="aside-img" src="img/aside3.png">
+                        <h3 class="aside-title">At SIHH 2018, luxury watchmakers swap vintage for innovation</h3>
+                    </a>
+                </div>
+            </div><!--aside-block-->
+        </div><!--articles-wrapper-->
+
+
+    </div><!--article-block-wrapper-->
+</div><!--main-container-->
+
+<div class="footer-wrapper">
+    <footer class="footer">
+        <div class="footer-logo-wrapper">
+            <img class="footer-logo__img" src="img/cnnBlackLogo.png">
+            <p class="footer-logo__text">International Edition +</p>
+        </div>
+        <!-- /.logo-wrapper -->
+        <div class="footer-rights-wrapper">
+            <p class="footer-rights__text">
+                © 2018 Cable News Network. Turner Broadcasting System, Inc. All Rights Reserved.
+                CNN Sans ™ & © 2016 Cable News Network.
+            </p>
+            <!-- /.footer-rights__text -->
+        </div>
+        <!-- /.footer-rights-wrapper -->
+    </footer>
+    <!-- /.footer -->
+</div>
+<!-- /.footer-wrapper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
+<script src="js/javascript.js"></script>
 </body>
 </html>
