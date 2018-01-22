@@ -167,12 +167,6 @@ a {
 
 /*====top article====*/
 
-.article-wrapper a:hover > p,
-.top-article a:hover > p,
-.aside-article-wrapper a:hover > h3{
-    color: #d80920;
-}
-
 .top-article{
     width: 100%;
 }
@@ -443,5 +437,11 @@ a {
 
     .home-wrapper{
         display: none;
+    }
+
+    .article-wrapper a:hover > p,
+    .top-article a:hover > p,
+    .aside-article-wrapper a:hover > h3{
+        color: #d80920;
     }
 }
