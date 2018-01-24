@@ -20,6 +20,7 @@
     margin: 0;
     font-family: 'MuseoSansRounded-100', sans-serif;
     color: #e1e1e1;
+    transition: all 0.3s;
 }
 
 html {
@@ -42,53 +43,66 @@ a {
 /*====================================*/
 
 .main-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
     height: 100vh;
 }
 
-.container-first {
-    flex-basis: 800px;
-    height: 600px;
-    background: url("../img/container-1.jpg") no-repeat top center;
+.first-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../img/container-1.jpg") no-repeat top;
     background-size: cover;
+}
+
+.second-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 85%;
+    border-radius: 10px;
+    background: #111a28;
+    box-shadow: 0 0 65px rgba(0, 0, 0, 0.82);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.container-second {
+/*==================first-side===================*/
+
+.first-side {
+    position: relative;
+    width: 100%;
     display: flex;
-    flex-basis: 686px;
-    height: 391px;
-    border-radius: 10px;
-    background: #111a28;
-    background-size: 100%;
-    box-shadow: 0 0 65px rgba(0, 0, 0, 0.82);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
 }
 
-/*==========left-container=========*/
+.img-logo {
+    width: 100%;
+    max-width: 65px;
+    height: 33px;
+}
 
-.left-container {
-    position: relative;
-    flex-basis: 437px;
-    height: 100%;
-    background: url("../img/boots.png") no-repeat 36px 126px,
-    url("../img/logo.png") no-repeat 21px 24px;
-    background-size: auto;
-    display: flex;
+.img-boots {
+    width: 100%;
+    max-width: 329px;
+    height: auto;
+    margin-top: 1.5rem;
 }
 
 /*========circle-links=======*/
 
 .circle-links-container {
-    position: absolute;
-    flex-basis: 66px;
-    height: 15px;
-    bottom: 21px;
-    left: 178px;
+    width: 100%;
+    max-width: 329px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,17 +137,20 @@ a {
     background: #29e3ea;
 }
 
-/*==========right-container========*/
-
-.right-container {
-    display: block;
-    max-width: 249px;
+/*================second-side=====================*/
+.second-side {
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
 }
 
+/*=========text===========*/
+
 .text-wrapper {
-    margin-top: 75px;
-    margin-left: 5px;
+    margin-left: 1rem;
 }
 
 .boots-name,
@@ -152,9 +169,11 @@ a {
     padding-top: 1rem;
 }
 
+/*=========stars=========*/
+
 .stars-wrapper {
-    margin-left: 5px;
-    margin-top: 24px;
+    margin-left: 1rem;
+    margin-top: 20px;
 }
 
 .fa-star {
@@ -171,11 +190,13 @@ a {
 /*=========buttons=======*/
 
 .button-wrapper {
-    margin-top: 27px;
+    margin-top: 24px;
+    margin-left: 1rem;
 }
 
 .button-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .button__item__1 {
@@ -202,6 +223,8 @@ a {
     padding-left: 9px;
 }
 
+/*==============add-button=================*/
+
 .add-button-wrapper {
     margin-top: 29px;
 }
@@ -210,7 +233,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 184px;
+    max-width: 184px;
     height: 40px;
     border: 1px solid #e1e1e1;
     opacity: 0.26;
@@ -316,3 +339,102 @@ a {
     opacity: 1;
 }
 
+/*=================MEDIA=================*/
+
+/*===========480=================*/
+
+@media screen and (min-width: 480px) {
+
+    .main-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first-background {
+        position: relative;
+        height: 600px;
+    }
+
+    .second-background {
+        height: 391px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .first-side {
+        width: 50%;
+    }
+
+    .second-side {
+        width: 50%;
+    }
+
+}
+
+/*===========580==================*/
+
+@media screen and (min-width: 580px) {
+
+    .first-side {
+        margin-left: 10%;
+    }
+
+}
+
+/*============800================*/
+
+@media screen and (min-width: 800px) {
+
+    .first-background {
+        width: 800px;
+    }
+
+    .second-background {
+        width: 686px;
+    }
+
+    .first-side {
+        margin-left: 0;
+        width: 60%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .second-side {
+        width: 40%;
+        height: 100%;
+        padding: 0 0 0 14px;
+    }
+
+    .img-logo {
+        position: absolute;
+        left: 21px;
+        top: 24px;
+    }
+
+    .img-boots {
+        margin-top: 0;
+        position: absolute;
+        left: 36px;
+        top: 126px;
+    }
+
+    .circle-links-container {
+        position: absolute;
+        left: 178px;
+        bottom: 20px;
+        padding-top: 0;
+        width: 70px;
+        height: 12px;
+    }
+
+    .text-wrapper{
+        padding-top: 74px;
+    }
+
+    .boots-description {
+        padding-top: 7px;
+    }
+}
