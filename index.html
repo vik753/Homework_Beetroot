@@ -3,88 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
     <link rel="stylesheet" href="css/style.css">
-    <title>Nike</title>
-    <link rel="icon" href="img/nikeIcon.png">
+    <title>Coffee</title>
+    <link rel="icon" href="img/coffee_beans.png">
 </head>
 <body>
-
-<div class="main-wrapper">
-    <div class="first-background">
-        <div class="second-background">
-            <div class="first-side">
-                <img src="img/logo.png" class="img-logo">
-                <!-- /.img-logo -->
-                <img src="img/boots.png" class="img-boots">
-                <!-- /.img-boots -->
-                <div class="circle-links-container">
-                    <a href="#" class="circle-link circle-link--one"></a>
-                    <a href="#" class="circle-link circle-link--two"></a>
-                    <a href="#" class="circle-link circle-link--three"></a>
-                    <a href="#" class="circle-link circle-link--four"></a>
-                </div>
-                <!-- /.circle-links-container -->
-            </div>
-            <!-- /.first-side -->
-            <div class="second-side">
-                <div class="text-wrapper">
-                    <h2 class="boots-name">Nike SB Stefan</h2>
-                    <p class="boots-model">Janoski Max</p>
-                    <p class="boots-description">Unisex Skateboarding Shoe</p>
-                </div><!-- /.text-wrapper -->
-                <div class="stars-wrapper">
-                    <i class="fa  fa-star fa-star__1"></i>
-                    <i class="fa  fa-star fa-star__2"></i>
-                    <i class="fa  fa-star fa-star__3"></i>
-                    <i class="fa  fa-star fa-star__4"></i>
-                    <i class="fa  fa-star fa-star__5"></i>
-                </div><!-- /.stars-wrapper -->
-
-                <div class="button-wrapper">
-                    <ul class="button-list">
-                        <li class="button__item button__item__1">
-                            <input type="checkbox" id="size-checkbox" class="size-checkbox">
-                            <a href="#" class="button__link"><span>Size<i class="fa fa-angle-down"></i></span></a>
-                            <!--input size-->
-                            <!--<input type="checkbox" id="size-checkbox" class="size-checkbox">-->
-                            <label for="size-checkbox" class="size-label"></label>
-                            <ul class="size-sub__list">
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">XXS</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">XS</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">S</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">M</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">L</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">XL</a></li>
-                                <li class="size-sub__item"><a href="#" class="size-sub__link">XXL</a></li>
-                            </ul>
-                        </li>
-                        <li class="button__item button__item__2">
-                            <input type="checkbox" id="qty-checkbox" class="qty-checkbox">
-                            <a href="#" class="button__link"> <span>Qty<i class="fa fa-angle-down"></i></span></a>
-                            <!--input qty-->
-                            <label for="qty-checkbox" class="qty-label"></label>
-                            <ul class="size-sub__list">
-                                <li class="qty-sub__item"><a href="#" class="qty-sub__link">1</a></li>
-                                <li class="qty-sub__item"><a href="#" class="qty-sub__link">2</a></li>
-                                <li class="qty-sub__item"><a href="#" class="qty-sub__link">3</a></li>
-                                <li class="qty-sub__item"><a href="#" class="qty-sub__link qty-sub__link__4">More...</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="add-button-wrapper">
-                        <a href="#" class="add-link"><span>Add to cart</span></a>
-                    </div><!-- /.add-button-wrapper -->
-                </div><!-- /.button-wrapper -->
-
-            </div><!-- /.second-side -->
-            <!-- /.second-side -->
-        </div>
-        <!-- /.second-background -->
-    </div>
-    <!-- /.first-background -->
+<div class="container">
+    <div class="row">
+        <div class="col col-bronze">
+            <p class="col__price">$ 2</p>
+            <img src="img/cup-bronze.png" alt="" class="col__picture">
+            <h2 class="col__title">Bronze</h2>
+            <p class="col__context">any cup of coffee<br>until $3</p>
+        </div><!--/.col col-bronze-->
+        <div class="col col-gold">
+        <span class="col-gold__inner-wrapper">
+            <p class="col__price">$ 3</p>
+            <img src="img/cup-gold.png" alt="" class="col__picture">
+            <h2 class="col__title">Gold</h2>
+            <p class="col__context">any cup of coffee<br>until $5</p>
+        </span>
+        </div><!--/.col col-gold-->
+        <div class="col col-silver">
+            <p class="col__price">$ 2.5</p>
+            <img src="img/cup-silver.png" alt="" class="col__picture">
+            <h2 class="col__title">Silver</h2>
+            <p class="col__context">any cup of coffee<br>until $4</p>
+        </div><!--/.col col-silver-->
+    </div><!--/.row-->
 </div>
-<!-- /.main-wrapper -->
-
+<!-- /.container -->
 </body>
 </html>
