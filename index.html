@@ -1,37 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Coffee</title>
-    <link rel="icon" href="img/coffee_beans.png">
+    <meta charset="utf-8">
+	<title>Blog-grid</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script src="https://use.fontawesome.com/9cb7fb39a7.js"></script><!--FontAwesome-->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col col-bronze">
-            <p class="col__price">$ 2</p>
-            <img src="img/cup-bronze.png" alt="" class="col__picture">
-            <h2 class="col__title">Bronze</h2>
-            <p class="col__context">any cup of coffee<br>until $3</p>
-        </div><!--/.col col-bronze-->
-        <div class="col col-gold">
-        <span class="col-gold__inner-wrapper">
-            <p class="col__price">$ 3</p>
-            <img src="img/cup-gold.png" alt="" class="col__picture">
-            <h2 class="col__title">Gold</h2>
-            <p class="col__context">any cup of coffee<br>until $5</p>
-        </span>
-        </div><!--/.col col-gold-->
-        <div class="col col-silver">
-            <p class="col__price">$ 2.5</p>
-            <img src="img/cup-silver.png" alt="" class="col__picture">
-            <h2 class="col__title">Silver</h2>
-            <p class="col__context">any cup of coffee<br>until $4</p>
-        </div><!--/.col col-silver-->
-    </div><!--/.row-->
-</div>
-<!-- /.container -->
+<main class="main">
+	<div class="main-container">
+		<div class="blog-container blog-container--main-article">
+			<span class="blog-date blog-date--main-article">November 28, 2015</span>
+			<h2 class="blog-caption blog-caption--main-article">Fantastic Designs Of 2015<br>Concept Cars</h2>
+		</div><!--/.blog-container blog-container--main-article-->
+		<div class="blog-container">
+			<div class="img-wrapper"></div>
+			<span class="blog-date">November 28, 2015</span>
+			<h2 class="blog-caption">How To Find Design<br>
+				Inspiration In The Simple<br>
+				Things Around You</h2>
+			<img src="i/icon.png" alt="" class="blog-author">
+		</div><!--/.blog-container-->
+		<div class="blog-container">
+			<div class="img-wrapper"></div>
+			<span class="blog-date">November 28, 2015</span>
+			<h2 class="blog-caption">How To Find Design<br>
+				Inspiration In The Simple<br>
+				Things Around You</h2>
+			<img src="i/icon.png" alt="" class="blog-author">
+		</div><!--/.blog-container-->
+		<div class="blog-container">
+			<div class="img-wrapper"></div>
+			<span class="blog-date">November 28, 2015</span>
+			<h2 class="blog-caption">How To Find Design<br>
+				Inspiration In The Simple<br>
+				Things Around You</h2>
+			<img src="i/icon.png" alt="" class="blog-author">
+		</div><!--/.blog-container-->
+		<div class="blog-container">
+			<div class="img-wrapper"></div>
+			<span class="blog-date">November 28, 2015</span>
+			<h2 class="blog-caption">How To Find Design<br>
+				Inspiration In The Simple<br>
+				Things Around You</h2>
+			<img src="i/icon.png" alt="" class="blog-author">
+		</div><!--/.blog-container-->
+
+		<div class="blog-loading">
+			<i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+			<p>LOADING NEW CONTENT</p>
+		</div><!--/.blog-loading-->
+
+	</div><!--/.main-container-->
+
+</main>
 </body>
 </html>

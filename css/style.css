@@ -1,93 +1,214 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
 
 * {
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
     padding: 0;
+    margin: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-/*=====================*/
-.container{
+html {
+    font-size: 16px;
+}
+
+/*=========Animation==========*/
+
+@keyframes shrink {
+    0% {
+        left: 5px;
+        top: 5px;
+    }
+
+    50% {
+        right: 5px;
+        bottom: 5px;
+    }
+    100% {
+        left: 0;
+        right: 0;
+    }
+}
+
+/*=======================================*/
+
+main {
     width: 100vw;
-    height: 100vh;
+    background: #e2e7ec;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.row {
-    width: 1200px;
-    height: 600px;
-    background: #fdde7e;
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.col {
+.main-container {
+    /*flex: 0 0 400px;*/
+    flex: 0 0 100%;
+    padding-top: 20px;
+    padding-right: 20px;
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    flex: 0 0 361px;
+    flex-wrap: wrap;
+}
+
+.blog-container {
+    /*flex: 0 0 360px;*/
+    flex-grow: 1;
+    height: 540px;
     background: #fff;
-    text-align: center;
-    border-radius: 4px;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
-    transition-duration: 1.5s;
-    cursor: pointer;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    z-index: 1;
 }
 
-.col:hover{
-    transform: scale3d(1.1, 1.1, 1);
-    transition: 1s;
-    background: #d9e2d3;
-    background: -moz-linear-gradient(45deg, #d9e2d3 0%, #a1eab1 50%, #d4e2c9 100%);
-    background: -webkit-linear-gradient(45deg, #d9e2d3 0%,#a1eab1 50%,#d4e2c9 100%);
-    background: linear-gradient(45deg, #d9e2d3 0%,#a1eab1 50%,#d4e2c9 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e2d3', endColorstr='#d4e2c9',GradientType=1 );
+.blog-container:last-child {
+    margin-bottom: 0;
 }
 
-.col-bronze,
-.col-silver{
-    padding-top: 1.6rem;
-    padding-bottom: 2.2rem;
-}
+/*=========block-container--main-article=========*/
 
-.col-gold {
-    align-self: stretch;
-    margin: 50px 0;
-}
-
-.col-gold__inner-wrapper{
-    height: 100%;
+.blog-container--main-article {
+    flex: 0 1 740px;
+    background: url("../i/car.jpg") no-repeat;
+    background-size: cover;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 38px;
+}
+
+.blog-date--main-article {
+    padding-left: 42px;
+
+}
+
+.blog-caption--main-article {
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 20px 10px 0 42px;
+}
+
+/*=========blog-date==========*/
+
+.img-wrapper {
+    width: 100%;
+    height: 251px;
+    background: url("../i/im1.jpg") no-repeat;
+    background-size: cover;
+    margin-bottom: 26px;
+}
+
+.blog-date {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: #818181;
+    padding-left: 42px;
+
+}
+
+.blog-caption {
+    padding: 20px 10px 0 42px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    /*font-size: 1.375rem;*/
+}
+
+.blog-author {
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+}
+
+/*==========.blog-loading ============*/
+
+.blog-loading {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: #818181;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-.col__price{
-    font-size: 4.375rem;
-    color: #02995b;
+.fa-spinner {
+    margin-right: 0.7rem;
+    color: #99a5b0;
+    font-size: 1.5rem;
 }
 
-.col__picture{
-    margin-top: 1rem;
+/*==========Media-650===========*/
+
+@media screen and (min-width: 650px) {
+
+    .main-container {
+        flex: 0 0 100%;
+    }
+
+    .blog-container {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .blog-container--main-article {
+        flex: 0 0 calc(100% - 20px);
+    }
 }
 
-.col__title{
-    font-size: 3.5rem;
-    font-weight: 400;
-    color: #333;
-    margin-top: 1.125rem;
+/*==========Media-900===========*/
+
+@media screen and (min-width: 900px) {
+    .blog-container {
+        flex: 0 0 calc(33% - 20px);
+    }
+
+    .blog-container--main-article {
+        flex: 0 0 calc(66% - 20px);
+    }
 }
 
-.col__context{
-    font-size: 1.25rem;
-    color: #333;
-    margin-top: 1.25rem;
+/*==========Media-1160===========*/
+
+@media screen and (min-width: 1160px) {
+
+    .main-container {
+        flex: 0 0 1160px;
+    }
+
+    .blog-container {
+        flex: 0 0 360px;
+    }
+
+    .blog-container--main-article {
+        flex: 0 0 740px;
+    }
+
+    .blog-caption {
+        font-size: 1.375rem;
+    }
+
+    .blog-container:hover {
+        animation-name: shrink;
+        animation-duration: 0.07s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 3;
+        background: linear-gradient(45deg, rgba(255, 255, 255, 1) 10%, rgba(10, 255, 151, 0.3) 40%, rgba(255, 8, 97, 0.3) 80%, rgba(0, 0, 0, 0.3));
+
+    }
+
+    .blog-container--main-article:hover {
+        background: linear-gradient(45deg, rgba(255, 255, 255, 0.6) 10%, rgba(10, 255, 151, 0.3) 40%, rgba(255, 8, 97, 0.3) 80%, rgba(0, 0, 0, 1)),
+        url("../i/car.jpg") no-repeat;
+    }
+
+    .blog-container--main-article:hover .blog-date {
+        color: #e6e6e6;
+    }
+
 }
