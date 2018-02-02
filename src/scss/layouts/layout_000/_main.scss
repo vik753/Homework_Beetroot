@@ -1,0 +1,54 @@
+.main {
+    max-width: remy(1100);
+    margin: remy(150) auto 0;
+}
+
+// =======row-1==============
+.m-row {
+    display: flex;
+}
+
+.m-article {
+    padding-left: remy(20);
+    flex-grow: 1;
+}
+
+.m-article:last-of-type {
+    padding-right: remy(20);
+}
+
+.m-article__title {
+    @include captionBigFont;
+    position: relative; // ============================
+    &::before {
+        @include afterCaptionColorBlock;
+    }
+}
+
+.m-article__subTitle {
+    @include captionSmallFont;
+    font-size: remy(14);
+    padding-top: remy(25);
+}
+
+.m-article__context {
+    @include textFont;
+    padding-top: remy(22);
+}
+
+// ==================row-2==========
+.m-row_2 {
+    padding-top: remy(160);
+    padding-bottom: remy(100);
+}
+
+.m-article_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.m-article__context_2 {
+   max-width: remy(750);
+   text-align: center;
+}

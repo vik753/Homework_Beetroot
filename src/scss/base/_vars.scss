@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans&subset=cyrillic');
+//====================================//
+$imgPath: "../i/";
+$fontFamilyTitle:'Montserrat',
+sans-serif;
+$fontFamilyText: 'Open Sans',
+sans-serif;
+$fontSize: 1rem;
+$fontBase: 16px;
+$normalFontWeight: 400;
+$mediumFontWeight: 500;
+$boldFontWeight: 700;
+$textColor: #60606e;
+$themeColor:#7beec7;
+//===================================//
+@function remy($pixel) {
+    @return ($pixel / 16) * 1rem;
+}
+
+@mixin textFont {
+    font-family: $fontFamilyText;
+    font-size: remy(14);
+    color:$textColor;
+    line-height: remy(30);
+}
+
+@mixin captionBigFont {
+    font-family: $fontFamilyTitle;
+    font-size: remy(30);
+    font-weight: $boldFontWeight;
+    color: $textColor;
+    text-transform: uppercase;
+}
+
+@mixin captionSmallFont {
+    @include captionBigFont;
+    font-size: remy(18);
+}
+
+@mixin afterCaptionColorBlock {
+        content: '';
+        position: absolute;
+        display: block;
+        width: remy(68);
+        height: remy(21);
+        background:$themeColor;
+        z-index: -1;
+        top: 50%;
+}

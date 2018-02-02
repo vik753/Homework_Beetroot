@@ -1,0 +1,43 @@
+.h-container {
+    max-width: 100%;
+    background: url(#{$imgPath}header_Img.jpg)no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: remy(262);
+    padding-bottom: remy(165);
+}
+
+.h-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h-nav__title {
+    @include captionBigFont;
+    font-size: remy(36);
+}
+
+[class^="h-nav__link"] {
+    @include textFont;
+    font-weight: $boldFontWeight;
+    text-transform: uppercase;
+}
+
+.h-nav__link2 {
+    margin-left: remy(10);
+    position: relative;
+    // ============================
+    &::before {
+        content: '/';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $textColor;
+        left: remy(-10);
+        top: remy(-5);
+        font-size: remy(18);
+    }
+}
