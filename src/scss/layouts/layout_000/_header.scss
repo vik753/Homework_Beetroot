@@ -5,8 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: remy(262);
-    padding-bottom: remy(165);
+    padding-top: rem(262px);
+    padding-bottom: rem(165px);
 }
 
 .h-nav {
@@ -17,7 +17,7 @@
 
 .h-nav__title {
     @include captionBigFont;
-    font-size: remy(36);
+    font-size: rem(36px);
 }
 
 [class^="h-nav__link"] {
@@ -27,7 +27,7 @@
 }
 
 .h-nav__link2 {
-    margin-left: remy(10);
+    margin-left: rem(10px);
     position: relative;
     // ============================
     &::before {
@@ -36,8 +36,8 @@
         left: 0;
         top: 0;
         color: $textColor;
-        left: remy(-10);
-        top: remy(-5);
-        font-size: remy(18);
+        left: rem(-10px);
+        top: rem(-5px);
+        font-size: rem(18px);
     }
 }
