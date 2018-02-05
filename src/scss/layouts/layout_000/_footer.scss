@@ -1,0 +1,72 @@
+.footer{
+   background: $themeColor;
+   padding: rem(100px) 0 rem(50px);
+}
+
+[class^="form-"]{
+    max-width: rem(555px);
+    margin: 0 auto;
+    padding: 0 rem(15px);
+}
+
+.form1__title{
+    @include captionBigFont;
+    color: $whiteColor;
+}
+
+.form1__button{
+    margin-top: rem(30px);
+    width: rem(165px);
+    height: rem(49px);
+    cursor: pointer;
+    background: $whiteColor;
+    @include textFont;
+    color: $themeColor;
+    text-transform: uppercase;
+    font-weight: $boldFontWeight;
+    border: none;
+    &:focus{
+        outline: none;
+        background: darken($whiteColor, 10%);
+    }
+}
+
+.form-2{
+    margin-top: rem(50px);
+    background: $whiteColor;
+}
+
+.form2__title{
+    @include captionBigFont;
+    padding-top: rem(20px);
+}
+
+.form2__context{
+    padding-top: rem(15px);
+    @include textFont;
+}
+
+.form2__inpit-wrapper{
+    margin-top: rem(30px);
+    padding-bottom: rem(20px);
+    display: flex;
+}
+
+.form2__email{
+    @include inputEmail;
+    flex: 2 1 rem(375px);
+}
+
+.form2__button{
+    @include inputSendEmail;
+    position: relative;
+    flex:1 1 rem(135px);
+    background: $themeColor;
+    color: $whiteColor;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+        background: darken($themeColor, 20%);
+    }
+}

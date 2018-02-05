@@ -1,5 +1,5 @@
 .main {
-    max-width: rem(1100px);
+    max-width: rem(1172px);
     margin: rem(150px) auto 0;
 }
 
@@ -82,11 +82,23 @@
     position: absolute;
     left: rem(10px);
     top: rem(3px);
+    color: $whiteColor; // ============mobile-ico=============
     &.fa-mobile-alt {
-        left: rem(14px);
+        left: rem(15px);
     }
 }
 
 .options-context {
     @include textFont;
+}
+
+// =======.m-row_3========
+.m-row_3 {
+    padding-top: rem(115px);
+    padding-bottom: rem(95px);
+}
+
+// =============team-gallery=======
+.team-img {
+    padding: 0 rem(15px) rem(30px);
 }

@@ -12,15 +12,17 @@ $mediumFontWeight: 500;
 $boldFontWeight: 700;
 $textColor: #60606e;
 $themeColor:#7beec7;
+$whiteColor: #fff;
 //===================================//
-@function rem($target, $current:$fontBase) {
+@function rem($target,
+$current:$fontBase) {
     @return ($target / $current) * 1rem;
 }
 
 @mixin textFont {
     font-family: $fontFamilyText;
     font-size: rem(14px);
-    color:$textColor;
+    color: $textColor;
     line-height: rem(30px);
 }
 
@@ -38,12 +40,35 @@ $themeColor:#7beec7;
 }
 
 @mixin afterCaptionColorBlock {
-        content: '';
-        position: absolute;
-        display: block;
-        width: rem(68px);
-        height: rem(21px);
-        background:$themeColor;
-        z-index: -1;
-        top: 50%;
+    content: '';
+    position: absolute;
+    display: block;
+    width: rem(68px);
+    height: rem(21px);
+    background: $themeColor;
+    z-index: -1;
+    top: 50%;
+}
+
+@mixin fluidImg {
+    width: 100%;
+    max-width: 100%;
+}
+
+@mixin inputEmail {
+    height: rem(50px);
+    padding: 0 rem(10px);
+    &::placeholder {
+        text-transform: uppercase;
+        color: #cdcdcd;
+        font-size: rem(12px);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin inputSendEmail {
+    height: rem(50px);
+    text-transform: uppercase;
 }
