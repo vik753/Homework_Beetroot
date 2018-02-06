@@ -1,0 +1,147 @@
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.foto-wrapper{
+  position: relative;
+  margin-bottom: rem(123px);
+}
+
+.foto-wrapper-two{
+  position: relative;
+}
+
+.fluid-foto{
+  width: 100%;
+  max-width: rem(388px);
+  border-right: 1px solid $yellow;
+  border-bottom: 1px solid $yellow;
+}
+
+[class^="slider-"]{
+  display: none;
+}
+
+//==========context section============
+
+.context-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: rem(70px);
+}
+
+.context-title{
+  font-size: rem(36px);
+  color: $mainTitleColor;
+}
+
+.context-sub-title{
+  margin-top: rem(60px);
+  font-size: rem(24px);
+  color: $mainTitleColor;
+}
+
+.context{
+  color: $mainTextColor;
+  font-size: rem(14px);
+  position: relative;
+}
+
+//======socIcon=======
+
+.socIcon-wrapper{
+  display: flex;
+  margin: rem(30px) 0;
+}
+
+.social-icon_link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(35px);
+  height: rem(35px);
+  border: 2px solid $socialIcoColor;
+  border-radius: 50%;
+  margin-right: rem(5px);
+//  ==============
+  &:last-of-type{
+    margin-right: 0;
+  }
+}
+
+.social-svg-icon{
+  fill:$socialIcoColor;
+  width: 14px;
+  height: 14px;
+}
+
+.context{
+  max-width: rem(422px);
+  padding: 0 rem(5px);
+}
+
+//==========rectangle=====
+
+.rectangles-wrapper{
+  width: rem(50px);
+  display: flex;
+  margin: rem(20px) 0 rem(25px);
+}
+
+.rectangle{
+  display: inline-block;
+  width: rem(10px);
+  height: rem(4px);
+  background: $yellow;
+  margin-left: rem(1px);
+//  =========
+  &:last-of-type{
+    margin-left: 0;
+  }
+}
+
+.rectangle_white{
+  @extend .rectangle;
+  background: $white;
+  width: rem(5px);
+}
+
+//=========button-profile====
+
+.button-profile{
+  border: 2px solid $yellow;
+  width: 120px;
+  height: 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $mainTitleColor;
+  font-size: rem(14px);
+  font-weight: 700;
+}
+
+//=========buttom-poin=======
+
+.buttom-slider-wrapper{
+  display: flex;
+  justify-content: center;
+  height: rem(12px);
+  margin-bottom: rem(94px);
+}
+
+.buttom-poin{
+  width: rem(12px);
+  height: rem(12px);
+  background: $yellow;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  margin-right: rem(12px);
+//  ===========
+  &:last-of-type{
+    margin-right: 0;
+  }
+}

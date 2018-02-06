@@ -1,0 +1,27 @@
+.slider-prev_link,
+.slider-next_link{
+  display: inline-block;
+}
+
+
+.svg-icon_prev{
+  position: absolute;
+  display: inline-block;
+  width: rem(35px);
+  height: rem(35px);
+  fill:$yellow;
+  left: rem(-80px);
+  top: calc(50% - 12.5px);
+  transform: rotateZ(270deg);
+}
+
+.svg-icon_next{
+  position: absolute;
+  display: inline-block;
+  width: rem(35px);
+  height: rem(35px);
+  fill:$yellow;
+  left: 461px;
+  top: -556px;
+  transform: rotateZ(90deg);
+}

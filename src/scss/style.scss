@@ -1,19 +1,29 @@
 @import "base/index";
 
+
+
 @import "layouts/layout_000/index";
 
-@media (min-width:293px) {
-  @import "layouts/layout_293/index";
+@media only screen and (min-width: 451px) {
+  @import "layouts/layout_451/index";
 }
 
-@media (min-width:560px) {
-  @import "layouts/layout_560/index";
+@media only screen and (min-width: 576px) {
+  @import "layouts/layout_576/index";
 }
 
-@media (min-width: 968px) {
-  @import "layouts/layout_968/index";
+@media only screen and (min-width: 640px) {
+  @import "layouts/layout_640/index";
 }
 
-@media (min-width: 1172px) {
-  @import "layouts/layout_1172/index";
+@media only screen and (min-width: 768px) {
+  @import "layouts/layout_768/index";
+}
+
+@media only screen and (min-width: 992px) {
+  @import "layouts/layout_992/index";
+}
+
+@media only screen and (min-width: 1170px) {
+  @import "layouts/layout_1170/index";
 }

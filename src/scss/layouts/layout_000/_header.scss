@@ -1,43 +1,46 @@
-.h-container {
-    max-width: 100%;
-    background: url(#{$imgPath}header_Img.jpg)no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: rem(262px);
-    padding-bottom: rem(165px);
+.header-wrapper{
+  margin-top: rem(110px);
+  margin-bottom: rem(187px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
-.h-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header-title{
+  font-size: rem(60px);
+  font-weight: 500;
+  color: $yellow;
+  text-transform: uppercase;
 }
 
-.h-nav__title {
-    @include captionBigFont;
-    font-size: rem(36px);
+.header-subTitle{
+  font-size: rem(18px);
+  color: $headerSubTitleColor;
+  text-transform: uppercase;
 }
 
-[class^="h-nav__link"] {
-    @include textFont;
-    font-weight: $boldFontWeight;
-    text-transform: uppercase;
-}
-
-.h-nav__link2 {
-    margin-left: rem(10px);
-    position: relative;
-    // ============================
-    &::before {
-        content: '/';
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: $textColor;
-        left: rem(-10px);
-        top: rem(-5px);
-        font-size: rem(18px);
-    }
+.icon-wrapper{
+  position: absolute;
+  top: rem(125px);
+  //  ==================
+  &:after{
+    content: '';
+    position: absolute;
+    width: rem(150px);
+    height: rem(2px);
+    background: $yellow;
+    top: rem(8px);
+    left: rem(-160px);
+  }
+  //  ===================
+  &:before{
+    content: '';
+    position: absolute;
+    width: rem(150px);
+    height: rem(2px);
+    background: $yellow;
+    top: rem(8px);
+    left: rem(25px);
+  }
 }

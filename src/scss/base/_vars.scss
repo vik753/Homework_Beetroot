@@ -1,74 +1,26 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans&subset=cyrillic');
-//====================================//
-$imgPath: "../i/";
-$fontFamilyTitle:'Montserrat',
-sans-serif;
-$fontFamilyText: 'Open Sans',
-sans-serif;
-$fontSize: 1rem;
-$fontBase: 16px;
-$normalFontWeight: 400;
-$mediumFontWeight: 500;
-$boldFontWeight: 700;
-$textColor: #60606e;
-$themeColor:#7beec7;
-$whiteColor: #fff;
-//===================================//
-@function rem($target,
-$current:$fontBase) {
-    @return ($target / $current) * 1rem;
-}
+//fonts
+$google-font:  'https://fonts.googleapis.com/css?family=Ubuntu:400,500';
+$fontUbuntu: 'Ubuntu', sans-serif;
+$baseFontSize: 16px;
 
-@mixin textFont {
-    font-family: $fontFamilyText;
-    font-size: rem(14px);
-    color: $textColor;
-    line-height: rem(30px);
-}
+// Paths
 
-@mixin captionBigFont {
-    font-family: $fontFamilyTitle;
-    font-size: rem(30px);
-    font-weight: $boldFontWeight;
-    color: $textColor;
-    text-transform: uppercase;
-}
+$img: "../img/";
+$usersPath: "../userfiles/";
+// $fontPath: "../fonts/";
 
-@mixin captionSmallFont {
-    @include captionBigFont;
-    font-size: rem(18px);
-}
 
-@mixin afterCaptionColorBlock {
-    content: '';
-    position: absolute;
-    display: block;
-    width: rem(68px);
-    height: rem(21px);
-    background: $themeColor;
-    z-index: -1;
-    top: 50%;
-}
+ // Colors
+$black: #000000;
+$white: #ffffff;
+$socialIcoColor:#ccc;
+$yellow: #ffcc00;
+$headerSubTitleColor: #898f8f;
+$mainTitleColor:#666666;
+$mainTextColor: #333333;
 
-@mixin fluidImg {
-    width: 100%;
-    max-width: 100%;
-}
-
-@mixin inputEmail {
-    height: rem(50px);
-    padding: 0 rem(10px);
-    &::placeholder {
-        text-transform: uppercase;
-        color: #cdcdcd;
-        font-size: rem(12px);
-    }
-    &:focus {
-        outline: none;
-    }
-}
-
-@mixin inputSendEmail {
-    height: rem(50px);
-    text-transform: uppercase;
+*{
+  font-family: $fontUbuntu;
+  font-size: $baseFontSize;
+  color: $mainTextColor;
 }
