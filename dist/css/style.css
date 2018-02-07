@@ -157,6 +157,19 @@ th {
   margin-top: 3.75rem;
   font-size: 1.5rem;
   color: #666666;
+  position: relative;
+}
+
+.context-sub-title::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  background: #ffcc00;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -1.875rem;
 }
 
 .context {

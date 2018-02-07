@@ -44,6 +44,18 @@
   margin-top: rem(60px);
   font-size: rem(24px);
   color: $mainTitleColor;
+  position: relative;
+
+  &::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    background: $yellow;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(-30px);
+  }
 }
 
 .context{
