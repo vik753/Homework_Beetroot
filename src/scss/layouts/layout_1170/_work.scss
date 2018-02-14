@@ -1,0 +1,38 @@
+.work-content-container {
+  grid-template-columns: 370px 370px 370px;
+  grid-template-rows: 420px;
+  grid-gap: rem(30px);
+  justify-content: center;
+}
+
+[class^="work-content__wrapper"]:hover [class^="work-content__howerBox"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 50%;
+  grid-gap: rem(40px);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.work-content__hoverText {
+  align-self: end;
+  text-align: center;
+  font-family: $latoFont;
+  font-size: rem(22px);
+  text-transform: uppercase;
+  color: $whiteFont;
+}
+
+.svg-icon-content {
+  width: rem(41px);
+  height: rem(41px);
+  justify-self: center;
+}
+
+.work-button:hover {
+  color: darken(#ffffff, 10%);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}

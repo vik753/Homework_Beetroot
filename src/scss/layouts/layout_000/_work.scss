@@ -1,0 +1,84 @@
+.work-container{
+  background: #ffffff;
+}
+
+.work-container-inner{
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.work-title-container{
+  padding-top: rem(110px);
+}
+
+.work-title__text{
+  font-family: $ralewayFont;
+  font-size: rem(35px);
+  font-weight: 700;
+  color: $black;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: rem(70px);
+  position: relative;
+//  ============
+  &:after{
+    content: '';
+    position: absolute;
+    width: rem(86px);
+    height: rem(2px);
+    background: $black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.work-content-container{
+  margin-top: rem(90px);
+  margin-bottom: rem(80px);
+  padding: 0 rem(16px);
+  display: grid;
+  grid-template-columns: minmax(auto, 370px);
+  grid-template-rows: repeat(3, 420px);
+  grid-gap: rem(30px);
+  justify-content: center;
+}
+
+.work-content__wrapper-1{
+  background: url(#{$img}kinderPlanet.jpg) no-repeat;
+  background-size: cover;
+}
+
+.work-content__wrapper-2{
+  background: url(#{$img}jetindus.jpg) no-repeat;
+  background-size: cover;
+}
+
+.work-content__wrapper-3{
+  background: url(#{$img}cards.jpg) no-repeat;
+  background-size: cover;
+}
+
+[class^="work-content__howerBox"] {
+  display: none;
+}
+
+//=======work-button=========
+
+.work-button-container{
+  padding: 0 rem(16px) rem(80px);
+  display: grid;
+  grid-template-columns: minmax(auto, 370px);
+  justify-content: center;
+}
+
+.work-button{
+  display: inline-block;
+  padding: rem(20px) 0;
+  border: 2px solid $black;
+  text-align: center;
+  font-family: $latoFont;
+  font-size: rem(24px);
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,10 @@
+.services-container{
+
+  &__context-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.services-context-container {
+  grid-template-rows: minmax(rem(149px), auto) minmax(rem(95px), auto) minmax(rem(195px), auto);
+}

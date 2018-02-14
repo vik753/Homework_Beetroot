@@ -1,0 +1,23 @@
+.header-container{
+  grid-template-columns: 1fr 2fr;
+}
+
+.top-nav{
+  margin-top: 0;
+}
+
+.top-menu {
+
+  //  ========__item
+  &__item {
+    padding: 0;
+  }
+}
+
+.header-content-container{
+  margin: rem(240px) auto 0;
+}
+
+.header-content__link{
+  margin-top: rem(250px);
+}

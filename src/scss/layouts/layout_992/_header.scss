@@ -1,0 +1,15 @@
+.top-menu {
+
+  &__item {
+    position: relative;
+  }
+
+  &__link:hover  {
+    border-bottom: 3px solid $whiteFont;
+  }
+}
+
+.header-content__link:hover .header-svg-icon{
+  opacity: 1;
+}
+
