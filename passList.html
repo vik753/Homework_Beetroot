@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>index.html</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>index.html</h1>
+    <!--
+    Есть массив пассажиров поезда  pList
+    Написать две функции
+    addPassenger(name, list);
+    - name -> имя пассажира, list -> массив пассажиров (pList )
+    - если массив пассажиров пустой то просто добавляет имя  пассажира name в массив
+    - если в массиве уже есть пассажиры, то добавляет имя пассажира
+      name в первую найденную свободную ячейку (то есть в массиве не
+      должно быть пустых ячеек)
+
+    removePassenger(name, list);
+    - производит поиск по массиву и удаляет пассажира, имя которого
+      передается в качестве аргумента name
+    -->
+
+    <script>
+        var pList = new Array();
+
+        function addPassenger(name, list) {
+            list.push(name);
+        }
+
+        function removePassenger(name, list) {
+            if(list.some(function (e) {
+                  return e === name;
+                }))
+            {
+                var copyList = pList.filter(function(e){
+                    return e !== name;
+                });
+                pList = copyList;
+            }
+        else
+            {
+                console.log('This passanger - "' + name + '" isn\'t on our train!');
+            }
+        }
+
+
+        // usage
+        // Добавляем пассажиров
+        addPassenger("Tom", pList)
+        addPassenger("Bill", pList)
+        addPassenger("John", pList)
+        console.log(pList);
+
+        //Пытаемся удалить несуществующего пассажира
+        removePassenger("Эдик", pList)
+
+        // Убираем  пассажира
+        removePassenger("Bill", pList)
+        console.log(pList);
+
+        addPassenger("Ashley", pList)
+        console.log(pList);
+    </script>
+</div>
+</body>
+</html>
