@@ -28,7 +28,19 @@
         var pList = new Array();
 
         function addPassenger(name, list) {
-            list.push(name);
+           if((!list[0]) && list.length === 0){
+               list[0] = name;
+           } else {
+               for(let x = 0, ln = list.length; x < ln; x++){
+                   if(list[x] === 'free'){
+                       list[x] = name;
+                       break;
+                   }
+                   if(x === ln - 1){
+                       list.push(name);
+                   }
+               }
+           }
         }
 
         function removePassenger(name, list) {
@@ -36,10 +48,8 @@
                   return e === name;
                 }))
             {
-                var copyList = pList.filter(function(e){
-                    return e !== name;
-                });
-                pList = copyList;
+                var changeID = list.indexOf(name);
+                list[changeID] = 'free';
             }
         else
             {

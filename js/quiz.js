@@ -14,64 +14,50 @@ var questions = [
     ["5 * 5", 25]
 ];
 
-questions.forEach(function (item, id, array) {
-    let ansver = prompt(array[id][0], '');
-    if (ansver === String(array[id][1])) {
-        array[id][2] = true;
+var rightAnswers = new Array();
+var wrongAnswers = new Array();
+
+for (let x = 0, ln = questions.length; x < ln; x++) {
+    console.log();
+    if (String(questions[x][1]) === prompt(questions[x][0], '')) {
+        rightAnswers[rightAnswers.length] = questions[x][0];
     } else {
-        array[id][2] = false;
+        wrongAnswers[wrongAnswers.length] = questions[x][0];
     }
-});
+}
 
-let allRightAnswers = questions.every(function (e) {
-    return e[2] === true;
-});
-
-let title = document.getElementById('result_title');
+var rightAnswersArrLength = rightAnswers.length;
+var wrongAnswersArrLength = wrongAnswers.length;
+let title = document.getElementById('result__title');
 let text = document.getElementById('result__text');
-
-
-//all Right
-if (allRightAnswers) {
+//if all right
+if(rightAnswersArrLength === 3){
     title.innerHTML = 'You got 3 right answers!';
     text.innerHTML = 'Right answers: <br>';
-    questions.forEach(function (item, id, array) {
-        document.write(++id + ') ' + item[0] + ' = ' + item[1] + ';<br>');
+    rightAnswers.forEach(function (item, id, array) {
+        document.write(++id + ') ' + item + ';<br>');
     });
-
 }
-//all Wrong
-let allWrongAnswers = questions.every(function (e) {
-    return e[2] === false;
-});
-if (allWrongAnswers) {
+//if all wrong
+if(wrongAnswersArrLength === 3){
     title.innerHTML = 'You got 3 wrong answers!';
     text.innerHTML = 'Wrong answers: <br>';
-    questions.forEach(function (item, id, array) {
-        document.write(++id + ') ' + item[0] + ';<br>');
+    wrongAnswers.forEach(function (item, id, array) {
+        document.write(++id + ') ' + item + ';<br>');
     });
 }
 //middle result
-if (!allRightAnswers && !allWrongAnswers) {
-    let someRightAnswers = questions.filter(function (e) {
-        return e[2] === true;
-    });
-    let someWrongAnswers = questions.filter(function (e) {
-        return e[2] === false;
-    });
-
-    title.innerHTML = 'You got ' + someRightAnswers.length + ' right answers!';
+if(rightAnswersArrLength !== 3 && wrongAnswersArrLength !== 3){
+    title.innerHTML = 'You got ' + rightAnswersArrLength + ' right answers!';
     text.innerHTML = 'Right answers: <br>';
-    someRightAnswers.forEach(function (item, id, array) {
-        document.write(++id + ') ' + item[0] + ' = ' + item[1] + ';<br>');
+    rightAnswers.forEach(function (item, id, array) {
+        document.write(++id + ') ' + item + ';<br>');
     });
     document.write('<br>Wrong answers:<br>');
-    someWrongAnswers.forEach(function (item, id, array) {
-        document.write(++id + ') ' + item[0] + ';<br>');
+    wrongAnswers.forEach(function (item, id, array) {
+        document.write(++id + ') ' + item + ';<br>');
     });
 }
-
-
 
 
 
