@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>myTimer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main-wrapper">
+    <h2 class="main-title">enter the end date and time of the timer</h2>
+    <div class="inputs-wrapper">
+        <input id="dateInput" class="dateInput" type="datetime-local">
+        <div class="input-box">
+        <label class="input-title">days</label>
+            <input id="input-days" type="text" class="input-item" placeholder="00" maxlength="2">
+        </div>
+        <div class="input-box">
+        <label class="input-title">hours</label>
+            <input id="input-hours" type="text" class="input-item" placeholder="00" maxlength="2">
+        </div>
+        <div class="input-box">
+        <label class="input-title">minutes</label>
+            <input id="input-minutes" type="text" class="input-item" placeholder="00" maxlength="2">
+        </div>
+        <div class="input-box">
+        <label class="input-title">seconds</label>
+            <input id="input-seconds" type="text" class="input-item" placeholder="00" maxlength="2">
+        </div>
+        <button id="btn-start" class="btn btn-start">START</button>
+        <button id="btn-stop" class="btn btn-stop">STOP</button>
+    </div>
+</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
