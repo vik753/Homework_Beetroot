@@ -104,6 +104,11 @@ html{
     grid-column: 3 / 5;
 }
 
+.monthInfo{
+    grid-column: 1 / 5;
+    text-align: center;
+}
+
 .dateInput{
     grid-column: 1 / 5;
     padding: 0.2rem 0.5rem;
