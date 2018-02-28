@@ -1,39 +1,212 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>myTimer</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			font-family: Verdana, sans-serif;
+		}
+		
+		.wrapper {
+			position: relative;
+			padding: 1rem;
+			max-width: 1000px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 80% 20%;
+			grid-template-rows: minmax(400px, max-content);
+			grid-gap: 0.5rem;
+		}
+		
+		.gamePlace {
+			border: 1px solid #e2e2e2;
+			border-radius: 5px;
+			background: #f1f1f1;
+			position: relative;
+		}
+		
+		.box {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: #28dc18;
+			position: absolute;
+		}
+		
+		.managePlace {
+			border: 1px solid #e2e2e2;
+			border-radius: 5px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(5, 1fr);
+			padding: 0.5rem;
+		}
+		
+		.move-btn {
+			text-decoration: none;
+			color: #333;
+			background: #e1e1e1;
+			border-radius: 5px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+			padding: 1rem 0.2rem;
+			display: grid;
+			align-content: center;
+			justify-content: center;
+			align-self: center;
+		}
+		
+		.move-btn:active {
+			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+		
+		.move-btn__top {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+		
+		.move-btn__left {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+		
+		.move-btn__right {
+			grid-column: 3 / 4;
+			grid-row: 3 / 4;
+		}
+		
+		.move-btn__bottom {
+			grid-column: 2 / 3;
+			grid-row: 4 / 5;
+		}
+		
+		.speed-wrapper {
+			grid-column: 1 / 4;
+			grid-row: 1;
+			display: grid;
+			justify-self: center;
+			align-self: center;
+		}
+		
+		.size-wrapper {
+			grid-column: 1 / 4;
+			grid-row: 5;
+			display: grid;
+			justify-self: center;
+			align-self: center;
+		}
+	</style>
 </head>
 <body>
-<div class="main-wrapper">
-    <h2 class="main-title">enter the end date and time of the timer</h2>
-    <div class="inputs-wrapper">
-        <input id="dateInput" class="dateInput" type="datetime-local">
-        <div class="input-box">
-        <label class="input-title">days</label>
-            <input id="input-days" type="text" class="input-item" placeholder="00" maxlength="2">
-        </div>
-        <div class="input-box">
-        <label class="input-title">hours</label>
-            <input id="input-hours" type="text" class="input-item" placeholder="00" maxlength="2">
-        </div>
-        <div class="input-box">
-        <label class="input-title">minutes</label>
-            <input id="input-minutes" type="text" class="input-item" placeholder="00" maxlength="2">
-        </div>
-        <div class="input-box">
-        <label class="input-title">seconds</label>
-            <input id="input-seconds" type="text" class="input-item" placeholder="00" maxlength="2">
-        </div>
-        <p id="monthInfo" class="monthInfo"></p>
-        <button id="btn-start" class="btn btn-start">START</button>
-        <button id="btn-stop" class="btn btn-stop">STOP</button>
-    </div>
+<div class="wrapper" id="wrapper">
+	<div class="gamePlace" id="gamePlace">
+		<div class="box" id="box"></div>
+	</div>
+	<div class="managePlace" id="managePlace">
+		<a href="#" class="move-btn move-btn__top" id="btnTop">Top</a>
+		<a href="#" class="move-btn move-btn__left" id="btnLeft">Left</a>
+		<div class="speed-wrapper">
+			<label for="speed" id="speedLabel">Speed</label>
+			<input type="range" min="5" max="30" class="speed" id="speed">
+		</div>
+		<a href="#" class="move-btn move-btn__right" id="btnRight">Right</a>
+		<a href="#" class="move-btn move-btn__bottom" id="btnBottom">Bottom</a>
+		<div class="size-wrapper">
+			<label for="sizeBall" id="sizeBallLabel">Size</label>
+			<input type="range" min="10" max="200" class="speed" id="sizeBall">
+		</div>
+	</div>
 </div>
 
+<script>
+	const boxManager = {
+		el: document.getElementById('box'),
+		idInterval: null,
+		toTop: function () {
+			clearInterval(this.idInterval);
+			this.idInterval = setInterval(() => this.doMove('y', Number(speed.value) * -1), 20);
+		},
+		toRight: function () {
+			clearInterval(this.idInterval);
+			this.idInterval = setInterval(() => this.doMove('x', Number(speed.value)), 20);
+		},
+		toLeft: function () {
+			clearInterval(this.idInterval);
+			this.idInterval = setInterval(() => this.doMove('x', Number(speed.value) * -1), 20);
+		},
+		toBottom: function () {
+			clearInterval(this.idInterval);
+			this.idInterval = setInterval(() => this.doMove('y', Number(speed.value)), 20);
+		},
+		stopMove: function () {
+			clearInterval(this.idInterval);
+		},
+		doMove: function (direction, val) {
+			console.log(val);
+			let gamePlaceW = document.getElementById('gamePlace').offsetWidth;
+			let gamePlaceH = document.getElementById('gamePlace').offsetHeight;
+			
+			if (direction === 'x') {
+				if ((val < 0 && this.el.offsetLeft > 0) ||
+					(val > 0 && (this.el.offsetLeft + this.el.offsetWidth) < gamePlaceW)) {
+					this.el.style.left = this.el.offsetLeft + val + 'px';
+				}
+			}
+			if (direction === 'y') {
+				if ((val < 0 && this.el.offsetTop > 0) ||
+					(val > 0 && (this.el.offsetTop + this.el.offsetHeight) < gamePlaceH)) {
+					this.el.style.top = this.el.offsetTop + val + 'px';
+				}
+			}
+		}
+	};
+	
+	
+	const box = document.getElementById('box');
+	const btnTop = document.getElementById('btnTop');
+	const btnLeft = document.getElementById('btnLeft');
+	const btnRight = document.getElementById('btnRight');
+	const btnBottom = document.getElementById('btnBottom');
+	const speed = document.getElementById('speed');
+	const speedLabel = document.getElementById('speedLabel');
+	const sizeBall = document.getElementById('sizeBall');
+	const sizeBallLabel = document.getElementById('sizeBallLabel');
+	
+	//to Top
+	btnTop.addEventListener("mousedown", () => boxManager.toTop(), false);
+	btnTop.addEventListener("mouseup", () => boxManager.stopMove(), false);
+	//to Right
+	btnRight.addEventListener("mousedown", () => boxManager.toRight(), false);
+	btnRight.addEventListener("mouseup", () => boxManager.stopMove(), false);
+	//to Left
+	btnLeft.addEventListener("mousedown", () => boxManager.toLeft(), false);
+	btnLeft.addEventListener("mouseup", () => boxManager.stopMove(), false);
+	//to bottom
+	btnBottom.addEventListener("mousedown", () => boxManager.toBottom(), false);
+	btnBottom.addEventListener("mouseup", () => boxManager.stopMove(), false);
+	//speed
+	speed.value = 5;
+	speedLabel.innerHTML = `Speed: ${speed.value}`;
+	speed.oninput = function () {
+		speedLabel.innerHTML = `Speed: ${this.value}`;
+	}
+	//size
+	sizeBall.value = 50;
+	sizeBallLabel.innerHTML = `Size: ${sizeBall.value}`;
+	sizeBall.oninput = function () {
+		sizeBallLabel.innerHTML = `Size: ${this.value}`;
+		box.style.width = sizeBall.value + 'px';
+		box.style.height = sizeBall.value + 'px';
+		
+	}
 
-<script src="js/index.js"></script>
+
+</script>
 </body>
 </html>
