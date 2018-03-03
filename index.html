@@ -1,212 +1,306 @@
-<!Doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
+	<title>Bak-One</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		* {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-			font-family: Verdana, sans-serif;
-		}
-		
-		.wrapper {
-			position: relative;
-			padding: 1rem;
-			max-width: 1000px;
-			margin: 0 auto;
-			display: grid;
-			grid-template-columns: 80% 20%;
-			grid-template-rows: minmax(400px, max-content);
-			grid-gap: 0.5rem;
-		}
-		
-		.gamePlace {
-			border: 1px solid #e2e2e2;
-			border-radius: 5px;
-			background: #f1f1f1;
-			position: relative;
-		}
-		
-		.box {
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			background: #28dc18;
-			position: absolute;
-		}
-		
-		.managePlace {
-			border: 1px solid #e2e2e2;
-			border-radius: 5px;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(5, 1fr);
-			padding: 0.5rem;
-		}
-		
-		.move-btn {
-			text-decoration: none;
-			color: #333;
-			background: #e1e1e1;
-			border-radius: 5px;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-			padding: 1rem 0.2rem;
-			display: grid;
-			align-content: center;
-			justify-content: center;
-			align-self: center;
-		}
-		
-		.move-btn:active {
-			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-		}
-		
-		.move-btn__top {
-			grid-column: 2 / 3;
-			grid-row: 2 / 3;
-		}
-		
-		.move-btn__left {
-			grid-column: 1 / 2;
-			grid-row: 3 / 4;
-		}
-		
-		.move-btn__right {
-			grid-column: 3 / 4;
-			grid-row: 3 / 4;
-		}
-		
-		.move-btn__bottom {
-			grid-column: 2 / 3;
-			grid-row: 4 / 5;
-		}
-		
-		.speed-wrapper {
-			grid-column: 1 / 4;
-			grid-row: 1;
-			display: grid;
-			justify-self: center;
-			align-self: center;
-		}
-		
-		.size-wrapper {
-			grid-column: 1 / 4;
-			grid-row: 5;
-			display: grid;
-			justify-self: center;
-			align-self: center;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script><!--FontAwesome-->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="wrapper" id="wrapper">
-	<div class="gamePlace" id="gamePlace">
-		<div class="box" id="box"></div>
-	</div>
-	<div class="managePlace" id="managePlace">
-		<a href="#" class="move-btn move-btn__top" id="btnTop">Top</a>
-		<a href="#" class="move-btn move-btn__left" id="btnLeft">Left</a>
-		<div class="speed-wrapper">
-			<label for="speed" id="speedLabel">Speed</label>
-			<input type="range" min="5" max="30" class="speed" id="speed">
+<!--===============Header======================-->
+<header>
+	<div class="container-top-header">
+		<div class="container-logo">
+			<img class="logo__img" src="img/FooterLogo.jpg" alt="logo">
+			<h2 class="logo__title">Bak-One</h2>
+			<p class="logo__text">One Page Flat Template</p>
 		</div>
-		<a href="#" class="move-btn move-btn__right" id="btnRight">Right</a>
-		<a href="#" class="move-btn move-btn__bottom" id="btnBottom">Bottom</a>
-		<div class="size-wrapper">
-			<label for="sizeBall" id="sizeBallLabel">Size</label>
-			<input type="range" min="10" max="200" class="speed" id="sizeBall">
+		<!-- /.container-logo -->
+		<div class="container-menu">
+			<span class="menu-mobile " id="menu-mobile">Menu</span>
+			<ul class="menu" id="menu">
+				<li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">About</a></li>
+				<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+			</ul>
 		</div>
+		<!-- /.container-menu -->
 	</div>
-</div>
-
-<script>
-	const boxManager = {
-		el: document.getElementById('box'),
-		idInterval: null,
-		toTop: function () {
-			clearInterval(this.idInterval);
-			this.idInterval = setInterval(() => this.doMove('y', Number(speed.value) * -1), 20);
-		},
-		toRight: function () {
-			clearInterval(this.idInterval);
-			this.idInterval = setInterval(() => this.doMove('x', Number(speed.value)), 20);
-		},
-		toLeft: function () {
-			clearInterval(this.idInterval);
-			this.idInterval = setInterval(() => this.doMove('x', Number(speed.value) * -1), 20);
-		},
-		toBottom: function () {
-			clearInterval(this.idInterval);
-			this.idInterval = setInterval(() => this.doMove('y', Number(speed.value)), 20);
-		},
-		stopMove: function () {
-			clearInterval(this.idInterval);
-		},
-		doMove: function (direction, val) {
-			console.log(val);
-			let gamePlaceW = document.getElementById('gamePlace').offsetWidth;
-			let gamePlaceH = document.getElementById('gamePlace').offsetHeight;
-			
-			if (direction === 'x') {
-				if ((val < 0 && this.el.offsetLeft > 0) ||
-					(val > 0 && (this.el.offsetLeft + this.el.offsetWidth) < gamePlaceW)) {
-					this.el.style.left = this.el.offsetLeft + val + 'px';
-				}
-			}
-			if (direction === 'y') {
-				if ((val < 0 && this.el.offsetTop > 0) ||
-					(val > 0 && (this.el.offsetTop + this.el.offsetHeight) < gamePlaceH)) {
-					this.el.style.top = this.el.offsetTop + val + 'px';
-				}
-			}
-		}
-	};
+	<!-- /.container-top-header -->
+</header>
+<!--===============MAIN======================-->
+<main>
+	<div class="container-brand">
+		<h1 class="brand__title">
+			<span class="regularTitle">We Build</span> Brand</h1>
+		<p class="brand__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy<br>nibh
+			euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+		<a href="#" class="brand__btn">Learn more</a>
+		<img class="brand__checkMark" src="img/v.png" alt="check mark">
+	</div>
+	<!-- /.container-brand -->
 	
+	<div class="container-portfolio">
+		<h4 class="portfolio__title">Portfolio</h4>
+		<p class="portfolio__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		<div class="portfolio-button-container">
+			<div class="portfolio-button-innerContainer">
+				<a href="#" class="portfolio-btn">All</a>
+				<a href="#" class="portfolio-btn">Web design</a>
+				<a href="#" class="portfolio-btn">Graphic design</a>
+				<a href="#" class="portfolio-btn">Flat design</a>
+			</div>
+			<!-- /.portfolio-button-innerContainer -->
+		</div>
+		<!-- /.portfolio-button-container -->
+		<div class="portfolio-icon-container">
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-1.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-2.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-3.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-4.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-5.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-6.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-7.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+			<a class="portfolio__img-wrapper" href="#">
+				<img class="portfolio__img" src="img/portfolio-img-8.png">
+				<div class="portfolio__hower_container">
+					<div class="portfolio__hower_lenseBox">
+						<i class="fas fa-search"></i>
+					</div>
+					<!-- /.portfolio__hower_lenseBox -->
+					<h6 class="portfolio__hover_title">Example Title</h6>
+					<p class="portfolio__hover_subTitle">Web design</p>
+				</div>
+				<!-- /.portfolio__hower-container -->
+			</a>
+			<!-- /.portfolio__img-wrapper -->
+		</div>
+		<!-- /.portfolio-icon-container -->
+	</div>
+	<!-- /.container-portfolio -->
 	
-	const box = document.getElementById('box');
-	const btnTop = document.getElementById('btnTop');
-	const btnLeft = document.getElementById('btnLeft');
-	const btnRight = document.getElementById('btnRight');
-	const btnBottom = document.getElementById('btnBottom');
-	const speed = document.getElementById('speed');
-	const speedLabel = document.getElementById('speedLabel');
-	const sizeBall = document.getElementById('sizeBall');
-	const sizeBallLabel = document.getElementById('sizeBallLabel');
-	
-	//to Top
-	btnTop.addEventListener("mousedown", () => boxManager.toTop(), false);
-	btnTop.addEventListener("mouseup", () => boxManager.stopMove(), false);
-	//to Right
-	btnRight.addEventListener("mousedown", () => boxManager.toRight(), false);
-	btnRight.addEventListener("mouseup", () => boxManager.stopMove(), false);
-	//to Left
-	btnLeft.addEventListener("mousedown", () => boxManager.toLeft(), false);
-	btnLeft.addEventListener("mouseup", () => boxManager.stopMove(), false);
-	//to bottom
-	btnBottom.addEventListener("mousedown", () => boxManager.toBottom(), false);
-	btnBottom.addEventListener("mouseup", () => boxManager.stopMove(), false);
-	//speed
-	speed.value = 5;
-	speedLabel.innerHTML = `Speed: ${speed.value}`;
-	speed.oninput = function () {
-		speedLabel.innerHTML = `Speed: ${this.value}`;
-	}
-	//size
-	sizeBall.value = 50;
-	sizeBallLabel.innerHTML = `Size: ${sizeBall.value}`;
-	sizeBall.oninput = function () {
-		sizeBallLabel.innerHTML = `Size: ${this.value}`;
-		box.style.width = sizeBall.value + 'px';
-		box.style.height = sizeBall.value + 'px';
-		
-	}
+	<div class="container-about">
+		<h2 class="about__title">About Us</h2>
+		<p class="about__subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		<div class="about__container-gallery">
+			<figure class="about__figure">
+				<img class="about__img" src="img/about-1.jpg">
+				<figcaption class="about__figcaption">
+					<h6 class="about__figcaption_name">Melannie Doe</h6>
+					<p class="about__figcaption_position">Project Manager</p>
+					<p class="about__figcaption_describe">Ut wisi enim ad minim veniam,
+						quis nostrud exerci tation
+						ullamcorper suscipit lobortis nisl
+						ut aliquip ex ea commodo
+						consequat.</p>
+				</figcaption>
+				<div class="about__hover-container">
+					<a href="https://www.facebook.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/facebook.svg">
+					</a>
+					<a href="https://twitter.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/twitter.svg">
+					</a>
+					<a href="https://plus.google.com" target="_blank" class="about__hover-img_link">
+						<img src="img/google+.svg">
+					</a>
+					<a href="https://dribbble.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/dribbble.svg">
+					</a>
+				</div>
+				<!-- /.about__hover-container -->
+			</figure>
+			<figure class="about__figure">
+				<img class="about__img" src="img/about-2.jpg">
+				<figcaption class="about__figcaption">
+					<h6 class="about__figcaption_name">Melannie Doe</h6>
+					<p class="about__figcaption_position">Project Manager</p>
+					<p class="about__figcaption_describe">Ut wisi enim ad minim veniam,
+						quis nostrud exerci tation
+						ullamcorper suscipit lobortis nisl
+						ut aliquip ex ea commodo
+						consequat.</p>
+				</figcaption>
+				<div class="about__hover-container">
+					<a href="https://www.facebook.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/facebook.svg">
+					</a>
+					<a href="https://twitter.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/twitter.svg">
+					</a>
+					<a href="https://plus.google.com" target="_blank" class="about__hover-img_link">
+						<img src="img/google+.svg">
+					</a>
+					<a href="https://dribbble.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/dribbble.svg">
+					</a>
+				</div>
+				<!-- /.about__hover-container -->
+			</figure>
+			<figure class="about__figure">
+				<img class="about__img" src="img/about-3.jpg">
+				<figcaption class="about__figcaption">
+					<h6 class="about__figcaption_name">Melannie Doe</h6>
+					<p class="about__figcaption_position">Project Manager</p>
+					<p class="about__figcaption_describe">Ut wisi enim ad minim veniam,
+						quis nostrud exerci tation
+						ullamcorper suscipit lobortis nisl
+						ut aliquip ex ea commodo
+						consequat.</p>
+				</figcaption>
+				<div class="about__hover-container">
+					<a href="https://www.facebook.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/facebook.svg">
+					</a>
+					<a href="https://twitter.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/twitter.svg">
+					</a>
+					<a href="https://plus.google.com" target="_blank" class="about__hover-img_link">
+						<img src="img/google+.svg">
+					</a>
+					<a href="https://dribbble.com/" target="_blank" class="about__hover-img_link">
+						<img src="img/dribbble.svg">
+					</a>
+				</div>
+				<!-- /.about__hover-container -->
+			</figure>
+			<!-- /.about__gallery_imgBox -->
+		</div>
+		<!-- /.about__container-gallery -->
+	</div>
+	<!-- /.container-about -->
+	<div class="container-contact">
+		<h2 class="contact__title">Contact Us</h2>
+		<p class="contact__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+		<div class="container-contact__form_information">
+			<div class="container-contact-form">
+				<input class="contact-form__input_text" type="text" placeholder="Your name">
+				<input class="contact-form__input_text" type="text" placeholder="Your email">
+				<textarea class="contact-form__input_textArea" name="userMessage" id="userMessage" cols="30" rows="8" placeholder="Your message"></textarea>
+				<a href="#" class="contact__btn_submit">Submit</a>
+			</div>
+			<!-- /.container-contact-form -->
+			<div class="container-contact-information">
+				<h6 class="contact-information__title">Information</h6>
+				<address class="contact-information__address">
+					<i class="fas fa-map-marker-alt"></i>
+					Bak-One Company<br>
+					12345 Hollywood Bvld Street<br>
+					Los Angeles, California
+				</address>
+				<span class="contact-information__phone">
+					<i class="fas fa-phone-square"></i>
+					+444 (Phone) 123456</span>
+				<span class="contact-information__fax">
+					<i class="fas fa-print"></i>
+					+123 (FAX) 0011223</span>
+				<span class="contact-information__email">
+					<i class="far fa-envelope"></i>
+					info@bak-onecompany.com</span>
+			</div>
+			<!-- /.container-contact-information -->
+		</div>
+		<!-- /.container-contact__form_information -->
+	</div>
+	<!-- /.container-contact -->
+</main>
+<!--===============Footer======================-->
+<footer class="footer">
+	<p class="footer__text">© Copyright 2013 Bak-One  |  One Page Flat Template</p>
+	<div class="footer__link_wrapper">
+		<a href="#" class="footer__link">
+			<i class="fas fa-chevron-up"></i>
+		</a>
+	</div>
+</footer>
 
-
-</script>
+<!--script=================================-->
+<script src="js/script.js"></script>
 </body>
 </html>
