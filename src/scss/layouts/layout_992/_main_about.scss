@@ -1,0 +1,18 @@
+@keyframes showHover {
+  0%{top: 0; opacity: 0;}
+  100%{top: rem(78px); opacity: 1;}
+}
+
+.about__container-gallery{
+  grid-column-gap: rem(60px);
+}
+
+.about__hover-container{
+  background: rgba(52,149,121,0.8);
+}
+
+.about__figure:hover .about__hover-container{
+  animation-name: showHover;
+  animation-duration: 0.5s;
+  display: grid;
+}

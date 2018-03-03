@@ -1,0 +1,105 @@
+.container-portfolio {
+  max-width: rem(940px);
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  padding: 0 rem(10px);
+}
+
+.portfolio__title {
+  margin-top: rem(45px);
+  font-size: rem(28px);
+  color: #444444;
+  text-align: center;
+}
+
+.portfolio__text{
+  font-size: rem(16px);
+  color: #444444;
+  margin-top: rem(10px);
+  text-align: center;
+}
+
+.portfolio-button-container{
+  margin-top: rem(30px);
+}
+
+
+.portfolio-button-innerContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: rem(10px);
+}
+
+
+.portfolio-btn{
+  @include buttonStyle;
+  padding: rem(10px) rem(7px);
+}
+
+//==========IMG================
+
+.portfolio__img{
+  width: rem(150px);
+  height: rem(150px);
+}
+
+.portfolio-icon-container{
+  margin-top: rem(45px);
+  margin-bottom: rem(60px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: rem(10px);
+  justify-items: center;
+}
+
+.portfolio__img-wrapper{
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.portfolio__hower_container{
+  display: none;
+  width: rem(180px);
+  height: rem(180px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  background: rgba(80, 179, 146, 0.9)
+}
+
+.portfolio__hower_lenseBox{
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 0.8rem;
+  position: absolute;
+  top: rem(35px);
+  left: rem(62px);
+}
+
+.fa-search{
+  color: #fff;
+  font-size: rem(21px);
+}
+
+.portfolio__hover_title{
+  grid-row: 2 / 3;
+  align-self: end;
+  text-align: center;
+  color: #fff;
+  font-size: rem(18px);
+}
+
+.portfolio__hover_subTitle{
+  grid-row: 3 / 4;
+  color: #fff;
+  padding-top: rem(10px);
+  text-align: center;
+  font-size: rem(14px);
+}
+
+

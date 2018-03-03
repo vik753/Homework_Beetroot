@@ -1,0 +1,39 @@
+
+.container-contact__form_information {
+  grid-template-columns: 1fr 1fr;
+  padding-top: rem(50px);
+}
+
+
+.container-contact-form{
+  margin: 0;
+}
+
+.container-contact-information{
+  margin: 0;
+  align-self: start;
+}
+
+.contact-information__title{
+  padding-top: 0;
+}
+
+.fa-map-marker-alt {
+  top: rem(40px);
+}
+
+.fa-phone-square{
+  top: 125px;
+}
+
+.fa-print{
+  top:157px;
+}
+
+.fa-envelope{
+  top: 190px;
+}
+
+.contact__btn_submit:hover {
+  background: #16a086;
+}

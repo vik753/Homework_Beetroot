@@ -1,0 +1,10 @@
+.about__container-gallery{
+  grid-template-columns: repeat(3, rem(220px));
+  grid-column-gap: rem(40px);
+  
+}
+
+.about__figure:not(:last-of-type){
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,56 @@
+
+
+@mixin box-sizing($val){
+  -webkit-box-sizing:$val;
+  -moz-box-sizing:$val;
+  box-sizing:$val;
+}
+
+@function rem($target, $current:$baseFontSize) {
+  @return ($target / $current) * 1rem;
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+@mixin m($modifier) {
+	&_#{$modifier} {
+		@content;
+	}
+}
+
+
+@mixin media($width) {
+    @media (min-width: $width) {
+      @content;
+    }  
+}
+
+@mixin font($f, $s, $w: '') {
+  font: #{$w} $s $f;
+}
+
+//========================== mY current mixins
+
+@mixin buttonStyle() {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  padding: rem(10px) rem(21px);
+  color: #fff;
+  font-size: $fontSizeButton;
+  font-weight: 600;
+  background: $colorGreenButton;
+}

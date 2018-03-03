@@ -1,0 +1,90 @@
+
+.container-top-header{
+  padding: rem(25px) 0 0;
+}
+
+//==================LOGO===========
+
+.container-logo {
+  display: grid;
+  grid-template-columns: rem(50px) 3fr;
+  margin-bottom: rem(25px);
+  margin-left: rem(10px);
+}
+
+.logo__img{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.logo__title{
+  grid-column: 2 / 5;
+  grid-row: 1 / 2;
+  display: grid;
+  align-content: end;
+  font-family: $lato;
+  font-size: rem(20px);
+  font-weight: 600;
+  padding-left: rem(10px);
+}
+
+.logo__text{
+  grid-column: 2 / 5;
+  grid-row: 2 / 3;
+  font-family: $lato;
+  font-size: rem(14px);
+  padding-left: rem(10px);
+}
+
+//==================Menu===========
+.menu{
+  list-style-type: none;
+}
+
+.menu__item:nth-of-type(even){
+  background: #f0f0f0;
+}
+
+.menu__link, .menu-mobile {
+  text-decoration: none;
+  font-family: $lato;
+  text-transform: uppercase;
+  display: block;
+  padding: rem(10px) rem(15px);
+  color: #444444;
+  font-size: $fontSizeButton;
+  font-weight: 400;
+  position: relative;
+}
+
+.menu-mobile{
+  font-weight: 600;
+  background: $colorGreenButton;
+  color: #fff;
+}
+
+.menu-mobile:before {
+  content: '▼';
+  position: absolute;
+  left: rem(65px);
+}
+
+//change icon when menu open
+.menu-mobile__after:before {
+  content: '▲';
+  position: absolute;
+  left: rem(65px);
+}
+
+.menu {
+  display: none;
+}
+
+.menu.open {
+  display: block;
+}
+
+
+
+
+//==================    ===========

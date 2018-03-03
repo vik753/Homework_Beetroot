@@ -1,0 +1,127 @@
+.container-contact {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  background: #ecf0f1;
+  padding: 0 rem(10px) rem(60px);
+}
+
+.contact__title {
+  font-family: $lato;
+  font-size: rem(28px);
+  color: #444;
+  text-align: center;
+  padding-top: rem(45px);
+}
+
+.contact__text {
+  font-family: $lato;
+  font-size: rem(14px);
+  color: #444;
+  text-align: center;
+  padding-top: rem(15px);
+}
+
+//==========container-contact__form_information
+
+.container-contact__form_information{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.container-contact-form{
+  margin: rem(50px) auto 0;
+  display: grid;
+  grid-template-columns: minmax(auto, rem(460px));
+  grid-gap: rem(20px);
+}
+
+.contact-form__input_text,
+.contact-form__input_textArea {
+  background: #fff;
+  padding: 0.8rem;
+  border: 2px solid #bec3c7;
+  
+  &::placeholder{
+    font-style: italic;
+    font-size: rem(14px);
+    color: #bec3c7;
+  }
+}
+
+.contact-form__input_textArea{
+  resize: none;
+}
+
+.contact-form__input_text:focus,
+.contact-form__input_textArea:focus{
+  outline: none;
+  border: 2px solid $colorGreenButton;
+  color: #333;
+}
+
+.contact__btn_submit{
+  @include buttonStyle;
+  font-size: rem(13px);
+  font-weight: 400;
+  padding: rem(12px) rem(30px);
+  justify-self: end;
+}
+
+//=========contact-information========
+
+.container-contact-information{
+  max-width: rem(480px);
+  margin: rem(50px) auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+}
+
+.contact-information__title{
+  font-size: rem(14px);
+  color: #444;
+  text-transform: uppercase;
+  padding-top: 2rem;
+}
+
+.contact-information__address{
+  font-size: rem(14px);
+  color: #444;
+  font-style: normal;
+  padding-left: rem(18px);
+  padding-top: rem(20px);
+  line-height: 1.5rem;
+}
+
+.contact-information__phone,
+.contact-information__fax,
+.contact-information__email{
+  padding-left: rem(18px);
+  font-size: rem(14px);
+  color: #444;
+  padding-top: rem(15px);
+}
+
+.fa-map-marker-alt,
+.fa-phone-square,
+.fa-print,
+.fa-envelope {
+  position: absolute;
+  left: 0;
+  top: rem(73px);
+  font-size: 0.9rem;
+}
+
+.fa-phone-square{
+  top: 157px;
+  transform: rotateZ(90deg);
+}
+
+.fa-print{
+  top:190px;
+}
+
+.fa-envelope{
+  top: 222px;
+}
+

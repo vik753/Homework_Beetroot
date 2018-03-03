@@ -1,0 +1,10 @@
+
+.container-top-header{
+  max-width: $maxWidth;
+  padding: rem(25px) rem(30px);
+  margin: 0 auto;
+}
+
+.menu__link:hover {
+  background: $colorGreenButton;
+}

@@ -1,0 +1,72 @@
+.container-about{
+  max-width: $maxWidth;
+  margin: 0 auto;
+  background: $colorAboutBackground;
+}
+
+.about__title{
+  font-size: rem(28px);
+  color: #fff;
+  text-align: center;
+  padding-top: rem(45px);
+}
+
+.about__subtitle{
+  font-size: rem(14px);
+  color: #fff;
+  text-align: center;
+  padding-top: rem(15px);
+}
+
+.about__container-gallery{
+  padding-top: rem(47px);
+  padding-bottom: rem(74px);
+  display: grid;
+  grid-template-columns: rem(220px);
+  justify-content: center;
+}
+
+.about__figure{
+  background: #fff;
+  position: relative;
+}
+
+.about__figure:not(:last-of-type){
+  margin-bottom: 2rem;
+}
+
+.about__figcaption_name{
+  padding-top: 1rem;
+  text-align: center;
+  font-size: rem(18px);
+  color: #444;
+}
+
+.about__figcaption_position{
+  font-style: italic;
+  padding-top: rem(5px);
+  text-align: center;
+  font-size: rem(14px);
+  color: #444;
+}
+
+.about__figcaption_describe {
+  padding: rem(20px) 1rem 1rem;
+  font-size: rem(14px);
+  color: #444;
+}
+
+.about__hover-container{
+  position: absolute;
+  top: rem(78px);
+  left: 50%;
+  transform: translateX(-50%);
+  width:  rem(180px);
+  height: rem(50px);
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding-top: rem(10px);
+  padding-bottom: rem(10px);
+}

@@ -1,0 +1,30 @@
+.footer{
+  max-width: $maxWidth;
+  margin: 0 auto;
+  background: #2d3e50;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: rem(25px) rem(40px);
+}
+
+.footer__text{
+  color: #fff;
+  font-size: rem(14px);
+  display: grid;
+  align-content: center;
+}
+
+.footer__link_wrapper{
+  display: none;
+  justify-self: right;
+  width: 45px;
+  height: 45px;
+  background: $colorGreenButton;
+  justify-content: center;
+  align-content: center;
+}
+
+.fa-chevron-up{
+  color: #fff;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,41 @@
+//==================Container===========
+
+.container-brand{
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: rem(65px) rem(10px) rem(85px);
+  background: url("#{$img}buildBrandBackground.jpg") no-repeat;
+  background-size: cover;
+  //==========
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.brand__title{
+  text-align: center;
+  font-size: rem(40px);
+  font-weight: 600;
+  color: #fff;
+}
+
+.regularTitle{
+  font-weight: 400;
+}
+
+.brand__text{
+  padding-top: rem(25px);
+  font-weight: 300;
+  font-size: rem(14px);
+  color: #fff;
+  text-align: center;
+}
+
+.brand__btn{
+  @include buttonStyle;
+  margin-top: rem(50px);
+}
+
+.brand__checkMark{
+  margin-top: rem(43px);
+}

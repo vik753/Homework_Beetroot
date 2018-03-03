@@ -1,0 +1,24 @@
+@keyframes showPortfolioHover {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.portfolio-btn:hover {
+  background: #16a086;
+}
+
+.container-portfolio {
+  padding: 0 0;
+}
+
+.portfolio-icon-container{
+  grid-column-gap: rem(65px);
+  grid-row-gap: rem(30px);
+}
+
+.portfolio__img-wrapper:hover .portfolio__hower_container{
+  display: grid;
+  animation-name: showPortfolioHover;
+  animation-duration: 0.5s;
+}
+

@@ -1,0 +1,35 @@
+.container-top-header {
+  display: grid;
+  grid-template-columns: rem(230px) 2fr;
+  grid-template-rows: 1fr;
+  padding: rem(25px) rem(10px);
+}
+
+.container-logo {
+  grid-column: 1/2;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.container-menu {
+  grid-column: 2/4;
+}
+
+//==================MENU===========
+.menu-mobile {
+  display: none;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: right;
+}
+
+.menu__item:nth-of-type(even) {
+  background: none;
+}
+
+.menu__link {
+  display: inline-block;
+}

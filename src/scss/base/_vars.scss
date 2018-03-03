@@ -1,0 +1,27 @@
+//fonts
+$google-font: 'https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900';
+
+$lato: 'Lato', 'sans-serif';
+
+//Font-sizes
+$baseFontSize: 16px;
+$fontSizeSimpleText: 14px;
+$fontSizeButton: 13px;
+
+$maxWidth: 1020px;
+
+// Paths
+$img: "../img/";
+
+
+// Colors
+$colorGreenButton: #1bbc9b;
+$colorFooterBackground: #2d3e50;
+$colorAboutBackground: #16a086;
+
+//========= to ALL===========
+
+* {
+  font-family: $lato;
+  transition: 0.3s ease;
+}
