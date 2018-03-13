@@ -12,22 +12,23 @@ $(function () {
 	
 	btnRight.on('click', function () {
 		event.preventDefault();
+		slider.find('li:first').stop(true, true).fadeOut(700);
 		let firstImg = slider.find('li:first').clone();
-		firstImg.stop(true, true).fadeOut();
-		slider.append(firstImg);
-		slider.find('li:first').stop(true, true).fadeOut();
 		slider.find('li:first').remove();
-		slider.find('li:first').stop(true ,true).fadeIn();
+		slider.append(firstImg);
+		slider.find('li:last').stop(true, true).fadeOut();
+		slider.find('li:first').stop(true, true).fadeIn(700);
+		
+		
 	});
 	
 	btnLeft.on('click', function () {
 		event.preventDefault();
 		let lastImg = slider.find('li:last').clone();
 		slider.find('li:last').remove();
-		slider.find('li:first').stop(true, true).fadeOut();
+		slider.find('li:first').stop(true, true).fadeOut(700);
 		slider.prepend(lastImg);
-		slider.find('li:first').stop(true, true).fadeIn();
-		console.log("left done");
+		slider.find('li:first').stop(true, true).fadeIn(700);
 	});
 	
 });
