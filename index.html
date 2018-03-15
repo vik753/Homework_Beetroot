@@ -3,87 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Title</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<title>AJAX TEST</title>
 </head>
 <body>
-<div class="main-container">
-	<div class="container">
-		<div class="container-box container-box_location">
-			<div class="container-title container-title_location">
-				<img src="img/location.png" class="ico">
-				<h2 class="title title_location">Location</h2>
-			</div>
-			<!-- /.container-title -->
-			<div class="container-article container-article_location">
-				<p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam autem excepturi
-					id in ipsa iste libero nihil officiis porro quia quidem, reprehenderit tempore temporibus
-					voluptates? Accusantium, deserunt fugiat impedit laboriosam nostrum recusandae ut voluptatem?
-					Adipisci aut consectetur, consequuntur ducimus esse id ipsum officia quam totam voluptatibus.
-					Aperiam, odit, optio!</p></div>
-			<!-- /.container-article -->
+
+<div class="container-main">
+	<div class="left-box">
+		<div class="select is-info">
+			<select class="select-users">
+				<option value="-1">Select user</option>
+			</select>
 		</div>
-		<!-- /.container-box -->
-		<div class="container-box container-box_music">
-			<div class="container-title container-title__music">
-				<img src="img/headphones.png" class="ico">
-				<h2 class="title title_music">Music</h2>
-			</div>
-			<!-- /.container-title -->
-			<div class="container-article container-article_music">
-				<p class="article article_music">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti earum error
-					impedit necessitatibus non obcaecati placeat quasi sapiente totam? Ad facere inventore ipsam iusto
-					magni nihil nostrum sapiente tenetur. Modi!</p></div>
-			<!-- /.container-article -->
-		</div>
-		<!-- /.container-box -->
-		<div class="container-box container-box_notes">
-			<div class="container-title container-title_notes">
-				<img src="img/bulb.png" class="ico">
-				<h2 class="title title_notes">Notes</h2>
-			</div>
-			<!-- /.container-title -->
-			<div class="container-article container-article_notes">
-				<p class="article article_notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad alias
-					asperiores assumenda at delectus dignissimos eius, hic ipsam iste labore laborum necessitatibus
-					numquam ratione soluta tempora voluptates? Corporis delectus doloremque eaque illo neque qui quia
-					unde voluptate? Officiis, rerum!</p></div>
-			<!-- /.container-article -->
-		</div>
-		<!-- /.container-box -->
-		<div class="container-box container-box_books">
-			<div class="container-title container-title_books">
-				<img src="img/book.png" class="ico">
-				<h2 class="title title_books">Books</h2>
-			</div>
-			<!-- /.container-title -->
-			<div class="container-article container-article_books">
-				<p class="article article_books">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, voluptas.</p>
-			</div>
-			<!-- /.container-article -->
-		</div>
-		<!-- /.container-box -->
-		<div class="container-box container-box_tendances">
-			<div class="container-title container-title_tendances">
-				<img src="img/lightning.png" class="ico">
-				<h2 class="title title_tendances">Tendances</h2>
-			</div>
-			<!-- /.container-title -->
-			<div class="container-article container-article_tendances">
-				<p class="article article_tendances">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nostrum obcaecati
-					officiis quasi? Accusantium eligendi expedita modi molestiae possimus rem!</p></div>
-			<!-- /.container-article -->
-		</div>
-		<!-- /.container-box -->
+		<div class="users-box"></div>
 	</div>
-	<!-- /.container -->
+	<!-- /.left-box -->
+	<div class="right-top-box"></div>
+	<!-- /.right-top-box -->
+	<div class="right-bottom-box"></div>
+	<!-- /.right-bottom-box -->
 </div>
-<!-- /.main-container -->
+<!-- /.container-main -->
 
-
-<!--========Script===========-->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!--======script-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkloMPcNO6WOm_QKHm0TiBWX0oLj2JqQk&callback=initMap"  async defer></script>
+<!--google-maps-->
 <script src="js/script.js"></script>
+<!--myScript-->
 </body>
 </html>
