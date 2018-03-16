@@ -19,7 +19,7 @@ function fillData(data) {
 		parseOb(user)
 		selectUsers.innerHTML += `<option value="${user.id}">${user.name}</option>`;
 		usersBox.innerHTML += `<a href="#${user.id}" data-id="${user.id}">${user.name}</a><br>`;
-	});
+	})
 }
 
 function parseOb(obj) {
@@ -32,7 +32,7 @@ function parseOb(obj) {
 		if (typeof value !== 'object') {
 			//console.log(key + ' : ' + value + '\r');
 			rightTopBox.innerHTML += `<p style="font-size: 12px">${key + ' : ' + value}</p>`;
-		} else if (typeof value === 'object') {
+		} else {
 			//console.log(key + ': \r');
 			rightTopBox.innerHTML += `<p style="font-size: 13px"><strong>${key + ' : '}</strong></p>`;
 			parseOb(value);
@@ -50,22 +50,20 @@ selectUsers.addEventListener('change', function () {
 },false);
 
 leftBox.addEventListener('click', function (el) {
-	let userID = el.target.getAttribute('data-id');
-	if (!userID){
-		return;
-	}
+	let userID = Number((el.target.getAttribute('data-id')) - 1);
 	let latU = Number(usersObj[userID].address.geo.lat);
 	let lngU = Number(usersObj[userID].address.geo.lng);
 	centreMap = {lat:latU, lng:lngU};
-	initMap(centreMap);
+	initMap();
 },false);
 
 //==========GOOGLE-MAP===========
 var map;
-function initMap(centreMap) {
+function initMap() {
 	if (!centreMap){
-		return false;
+	return false;
 	}
+	console.log(centreMap);
 	map = new google.maps.Map(document.querySelector('.right-bottom-box'), {
 		center: centreMap,
 		zoom: 3
@@ -77,3 +75,4 @@ function initMap(centreMap) {
 		icon: 'img/location.png'
 	})
 }
+
