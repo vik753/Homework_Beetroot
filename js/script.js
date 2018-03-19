@@ -1,78 +1,78 @@
-const URL = 'http://jsonplaceholder.typicode.com';
-const usersBox = document.querySelector('.users-box');
-const selectUsers = document.querySelector('.select-users');
-const rightTopBox = document.querySelector('.right-top-box');
-const leftBox = document.querySelector('.left-box');
-let centreMap;
-let usersObj;
+document.querySelector('.datetime').defaultValue = Date.now().toLocaleString();
 
-fetch(URL + '/users')
-	.then(answer => answer.json())
-	.then(fillData);
-
-function fillData(data) {
-	if (!data.length){
-		return null;
-	}
-	usersObj = data;
-	data.map(function (user) {
-		parseOb(user)
-		selectUsers.innerHTML += `<option value="${user.id}">${user.name}</option>`;
-		usersBox.innerHTML += `<a href="#${user.id}" data-id="${user.id}">${user.name}</a><br>`;
-	})
-}
-
-function parseOb(obj) {
-	var value;
-	for (var key in obj) {
-		if (key === 'id' ){
-			rightTopBox.innerHTML += `<br><h2 id="${obj[key]}" style="font-size: 14px; font-weight: bold; text-align: center">---- ${obj.name} ----</h2>`
+const app = new Vue({
+	el: '#app',
+	data: {
+		tasks: [
+			{id: 1, title: 'fix car', deadline: '19.03.2018', done: false, deadlineId: null},
+			{id: 2, title: 'shopping', deadline: '20.03.2018', done: true, deadlineId: null},
+			{id: 3, title: 'hairdresser', deadline: '18.03.2018', done: false, deadlineId: null},
+			{id: 4, title: 'insurance', deadline: '21.03.2018', done: false, deadlineId: null},
+		],
+		titleText: '',
+		filter: '1'
+	},
+	computed: {
+		filteredTasks() {
+			switch (this.filter) {
+				case ('1'):
+					return this.tasks;
+				case ('2'):
+					return this.tasks.filter(t => t.done);
+				case ('3'):
+					return this.tasks.filter(t => !t.done);
+			}
+		},
+		filterDone() {
+			return this.tasks.filter(t => t.done).length;
+		},
+		filterUnDone() {
+			return this.tasks.filter(t => !t.done).length;
 		}
-		value = obj[key];
-		if (typeof value !== 'object') {
-			//console.log(key + ' : ' + value + '\r');
-			rightTopBox.innerHTML += `<p style="font-size: 12px">${key + ' : ' + value}</p>`;
-		} else {
-			//console.log(key + ': \r');
-			rightTopBox.innerHTML += `<p style="font-size: 13px"><strong>${key + ' : '}</strong></p>`;
-			parseOb(value);
-		}
+	},
+	methods: {
+		delTask(id, deadlineId) {
+			if (confirm("Delete this task?")) {
+				clearTimeout(deadlineId);
+				this.tasks = this.tasks.filter(t => t.id !== id);
+			}
+		},
+		
+		addTask() {
+			let idTask = Date.now();
+			let deadlineId = null;
+			let message = this.titleText;
+			let currentDateTime = new Date();
+			let userDateTime = new Date(document.querySelector('.datetime').value);
+			if ((!userDateTime.isNaN) && (userDateTime - currentDateTime) > 0) {
+				console.log(userDateTime - currentDateTime);
+				deadlineId = setTimeout(() => {
+					clearTimeout(deadlineId);
+					//сделать task.done = !task.done
+					this.tasks = this.tasks.filter((t) => {
+						if ((t.id === idTask) && (confirm(`It's deadline for this task: " ` + message + '". Mark this task as done?'))) {
+							t.done = !t.done;
+							t.deadlineId = null;
+						}
+						return true;
+					})
+				}, (userDateTime - currentDateTime));
+				//*************************************
+				this.tasks.push({
+					id: idTask,
+					title: this.titleText,
+					deadline: document.querySelector('.datetime').value,
+					done: false,
+					deadlineId: deadlineId
+				});
+			} else {
+				alert(`Your date or time isn't correct! Try Again please!`);
+				return;
+			}
+			
+			this.titleText = '';
+		},
 	}
-}
+});
 
-selectUsers.addEventListener('change', function () {
-	let selectedId = this.value;
-	location.hash = `${selectedId}`;//переход по ссылке
-	let latU = Number(usersObj[selectedId].address.geo.lat);
-	let lngU = Number(usersObj[selectedId].address.geo.lng);
-	centreMap = {lat:latU, lng:lngU};
-	initMap(centreMap);
-},false);
-
-leftBox.addEventListener('click', function (el) {
-	let userID = Number((el.target.getAttribute('data-id')) - 1);
-	let latU = Number(usersObj[userID].address.geo.lat);
-	let lngU = Number(usersObj[userID].address.geo.lng);
-	centreMap = {lat:latU, lng:lngU};
-	initMap();
-},false);
-
-//==========GOOGLE-MAP===========
-var map;
-function initMap() {
-	if (!centreMap){
-	return false;
-	}
-	console.log(centreMap);
-	map = new google.maps.Map(document.querySelector('.right-bottom-box'), {
-		center: centreMap,
-		zoom: 3
-	});
-	const marker = new google.maps.Marker({
-		position: centreMap,
-		map: map,
-		title: 'User Home',
-		icon: 'img/location.png'
-	})
-}
 

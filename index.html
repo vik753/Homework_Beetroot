@@ -5,32 +5,92 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!--	Font ionicons  -->
+	
 	<link rel="stylesheet" href="css/style.css">
-	<title>AJAX TEST</title>
+	<!--	myStyles   -->
+	<title>title</title>
 </head>
 <body>
-
-<div class="container-main">
-	<div class="left-box">
-		<div class="select is-info">
-			<select class="select-users">
-				<option value="-1">Select user</option>
-			</select>
-		</div>
-		<div class="users-box"></div>
+<div id="app" class="container-main">
+	<div class="control horizontal">
+		<h3>Filter:</h3>
+		<label class="radio">
+			<input type="radio" name="foobar" value="1" checked
+				   v-model:value="filter">
+			All({{tasks.length}})
+		</label>
+		<label class="radio">
+			<input type="radio" name="foobar" value="2"
+				   v-model:value="filter">
+			Done({{filterDone}})
+		</label>
+		<label class="radio">
+			<input type="radio" name="foobar" value="3"
+				   v-model:value="filter">
+			Undone({{filterUnDone}})
+		</label>
 	</div>
-	<!-- /.left-box -->
-	<div class="right-top-box"></div>
-	<!-- /.right-top-box -->
-	<div class="right-bottom-box"></div>
-	<!-- /.right-bottom-box -->
+	
+	<ul>
+		<li
+				v-for="task in filteredTasks"
+				v-bind:class="{doneAll : task.done}"
+		>
+			<span class="horizontal"
+				  v-bind:class="{doneText : task.done}"
+			>
+				<span>{{task.title}}</span>
+				<span>{{task.deadline}}</span>
+			</span>
+			
+			<span>
+				<span><i class="ion-ios-bell"
+						 v-if="task.deadlineId"></i></span>
+				<span
+						v-on:click="task.done = !task.done"
+				>
+			<i class="ion-android-checkbox-outline-blank"
+			   v-if="!task.done"></i>
+			<i class="ion-android-checkbox-outline"
+			   v-if="task.done"></i>
+		</span>
+			<span
+					v-on:click="delTask(task.id, task.deadlineId)"
+			>
+				<i class="ion-ios-trash-outline"></i>
+			</span>
+			</span>
+		</li>
+	</ul>
+	<div class="control">
+		<label for="in1">new task deadline: </label>
+		<input id="in1"   class="datetime" type="datetime-local">
+	</div>
+	<div class="field has-addons">
+		<div class="control is-expanded">
+			<p class="control is-expanded">
+				
+				<input class="input" type="text" placeholder="Add new task"
+					   v-model:value="titleText">
+			</p>
+		</div>
+		<div class="control">
+			<button type="submit" class="button is-primary"
+					v-on:click="addTask"
+			>Add
+			</button>
+		</div>
+	</div>
 </div>
+
 <!-- /.container-main -->
 
 <!--======script-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkloMPcNO6WOm_QKHm0TiBWX0oLj2JqQk&callback=initMap"  async defer></script>
-<!--google-maps-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/script.js"></script>
 <!--myScript-->
 </body>
 </html>
+
