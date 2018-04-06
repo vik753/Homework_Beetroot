@@ -1,0 +1,19 @@
+* {
+    @include box-sizing(border-box);
+}
+
+html {
+    font-size: $baseFontSize;
+    font-family: $mainFont;
+    color: $grayFontColor;
+}
+
+//==========for Animation================
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}

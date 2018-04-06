@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>bouncy</title>
+  <link rel="icon" type="image/png" href="img//letter-b.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/smooth-scroll.min.js"></script>
+  <!--=======SmoothScroll======Has to be in start of page=======-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header" id="app">
+    <div class="container-header">
+      <div class="container_header_logoNav">
+        <div class="header__logo">
+          <img class="headerLogo" src="img/logo-header.png" alt="logo">
+        </div>
+        <!-- /.header__logo -->
+
+        <nav class="header__menu">
+          <span class="header__menu_mobile">Menu</span>
+          <div class="container-header__menu_links">
+            <a class="header__menu_link" href="#link">Hello</a>
+            <a class="header__menu_link" href="#portfolio" class="portfolio">Portfolio</a>
+            <a class="header__menu_link" href="#team" class="team">Team</a>
+            <a class="header__menu_link" href="#contactUs" class="contact">Contact</a>
+          </div>
+          <!-- /.container-header__menu_links -->
+        </nav>
+      </div>
+      <!-- /.container_header_logoNav -->
+
+      <div class="container__header_context">
+        <h1 class="header__title">We are code cafe</h1>
+        <p class="header__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+      </div>
+      <!-- /.container__header_context -->
+      <div class="container__header_btnNext">
+        <a class="header__btnNext" href="#portfolio">
+          <img class="header__btnNext_ico" src="img/chevron-down.svg" alt="ico go next">
+        </a>
+      </div>
+      <!-- /.container__header_btnNext -->
+    </div>
+    <!-- /.container-header -->
+  </header>
+
+  <!-- ===============PORTFOLIO====================== -->
+
+  <main class="main">
+    <div class="container-portfolio">
+      <div class="container-portfolio__inner">
+        <div class="container-portfolio__context">
+          <h2 class="portfolio__title" id="portfolio">The portfolio</h2>
+          <p class="portfolio__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+        <!-- /.container-portfolio__context -->
+        <div class="container-portfolio__galleryBlock">
+          <nav class="galleryBlock__nav">
+            <button class="galleryBlock__btn" data-filter="portfolio__img">All Works</button>
+            <button class="galleryBlock__btn" data-filter="print">Print</button>
+            <button class="galleryBlock__btn" data-filter="branding">Branding</button>
+            <button class="galleryBlock__btn" data-filter="web">Web</button>
+            <button class="galleryBlock__btn" data-filter="html">HTML</button>
+          </nav>
+          <div class="portfolio__gallery">
+            <div class="gutter-sizer"></div>
+            <!--create gutter-->
+            <img src="img/bouncy_01.jpg" alt="portfolio img1" class="portfolio__img print">
+            <img src="img/bouncy_03.jpg" alt="portfolio img2" class="portfolio__img print">
+            <img src="img/bouncy_02.jpg" alt="portfolio img3" class="portfolio__img print">
+            <img src="img/bouncy_04.jpg" alt="portfolio img4" class="portfolio__img branding">
+            <img src="img/bouncy_05.jpg" alt="portfolio img5" class="portfolio__img branding">
+            <img src="img/bouncy_06.jpg" alt="portfolio img6" class="portfolio__img branding">
+            <img src="img/bouncy_07.jpg" alt="portfolio img7" class="portfolio__img web">
+            <img src="img/bouncy_08.jpg" alt="portfolio img8" class="portfolio__img web">
+            <img src="img/bouncy_09.jpg" alt="portfolio img9" class="portfolio__img web">
+            <img src="img/bouncy_10.jpg" alt="portfolio img10" class="portfolio__img html">
+            <img src="img/bouncy_11.jpg" alt="portfolio img11" class="portfolio__img html">
+            <img src="img/bouncy_12.jpg" alt="portfolio img12" class="portfolio__img html">
+          </div>
+          <!-- /.portfolio__gallery -->
+        </div>
+        <!-- /.container-portfolio__galleryBlock -->
+      </div>
+      <!-- /.container-portfolio__inner -->
+    </div>
+    <!-- /.container-portfolio -->
+    <!-- ===================TEAM======================================= -->
+    <div class="container-team">
+      <div class="container-team__inner">
+        <div class="container-team__context">
+          <h2 class="team__title" id="team">The team</h2>
+          <p class="team__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+        <div class="container-team_slider">
+          <div class="team_slider">
+
+            <!-- ****************slide 1***************** -->
+
+            <div class="team_slider__slide">
+              <figure class="team_slider__slide_figure">
+                <div class="team_slider__slide_img">
+                  <img src="img/slider-1-1.jpg" alt="">
+                </div>
+                <figcaption class="team_slider__slide_context">
+                  <h2 class="team_slider__slide_name">Abdullah Noman</h2>
+                  <p class="team_slider__slide_position">Creative Director, Code Cafe</p>
+                  <p class="team_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus
+                    et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium. </p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+            </div>
+            <!-- /.team_slider__slide -->
+
+            <!-- ****************slide 2***************** -->
+
+            <div class="team_slider__slide">
+              <figure class="team_slider__slide_figure">
+                <div class="team_slider__slide_img">
+                  <img src="img/slider-1-2.jpg" alt="">
+                </div>
+                <figcaption class="team_slider__slide_context">
+                  <h2 class="team_slider__slide_name">Abdullah Noman</h2>
+                  <p class="team_slider__slide_position">Creative Director, Code Cafe</p>
+                  <p class="team_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus
+                    et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium. </p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+            </div>
+            <!-- /.team_slider__slide -->
+
+            <!-- ****************slide 3***************** -->
+
+            <div class="team_slider__slide">
+              <figure class="team_slider__slide_figure">
+                <div class="team_slider__slide_img">
+                  <img src="img/slider-1-3.jpg" alt="">
+                </div>
+                <figcaption class="team_slider__slide_context">
+                  <h2 class="team_slider__slide_name">Abdullah Noman</h2>
+                  <p class="team_slider__slide_position">Creative Director, Code Cafe</p>
+                  <p class="team_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus
+                    et iusto odio dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus
+                    qui blanditiis praesentium. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium. </p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+            </div>
+            <!-- /.team_slider__slide -->
+            <!-- /.team_slider -->
+          </div>
+          <!-- /.container-team-slider -->
+        </div>
+        <!-- /.container-team__inner -->
+      </div>
+      <!-- /.container-team -->
+      <!-- =============CONTACT US=================== -->
+      <div class="container-contactUs">
+        <h3 class="contactUs__title">Already Loved Us? Let’s talk!</h3>
+        <a class="contactUs__btn" href="mailto:some@gmail.com">Contact Us</a>
+      </div>
+      <!-- =============TESTIMONIALS=================== -->
+      <div class="container-testimonials">
+        <div class="container-testimonials__context">
+          <h2 class="testimonials__title" id="testimonials">Testimonials</h2>
+          <p class="testimonials__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+        <div class="container-testimonials_slider">
+          <div class="container-testimonials_slider-inner">
+            <div class="testimonials_slider">
+              <figure class="testimonials_slider__slide_figure">
+                <div class="testimonials_slider__slide_img">
+                  <img src="img/testimonials-1.png" alt="testimonials-1.png">
+                </div>
+                <figcaption class="testimonials_slider__slide_context">
+                  <p class="testimonials_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                    sunt in culpa qui officia deserunt mollitia.</p>
+                  <h2 class="testimonials_slider__slide_name">PARTHO</h2>
+                  <p class="testimonials_slider__slide_position">FOUNDER, ARTWAYS BD</p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+              <figure class="testimonials_slider__slide_figure">
+                <div class="testimonials_slider__slide_img">
+                  <img src="img/testimonials-2.png" alt="testimonials-1.png">
+                </div>
+                <figcaption class="testimonials_slider__slide_context">
+                  <p class="testimonials_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                    sunt in culpa qui officia deserunt mollitia.</p>
+                  <h2 class="testimonials_slider__slide_name">PARTHO</h2>
+                  <p class="testimonials_slider__slide_position">FOUNDER, ARTWAYS BD</p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+              <figure class="testimonials_slider__slide_figure">
+                <div class="testimonials_slider__slide_img">
+                  <img src="img/testimonials-3.png" alt="testimonials-1.png">
+                </div>
+                <figcaption class="testimonials_slider__slide_context">
+                  <p class="testimonials_slider__slide_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                    sunt in culpa qui officia deserunt mollitia.</p>
+                  <h2 class="testimonials_slider__slide_name">PARTHO</h2>
+                  <p class="testimonials_slider__slide_position">FOUNDER, ARTWAYS BD</p>
+                </figcaption>
+              </figure>
+              <!-- /.team_slider__slide_context -->
+            </div>
+          </div>
+          <!-- /.container-testimonials_slider -->
+        </div>
+        <!-- /.testimonials_slider -->
+      </div>
+      <!-- /.container-testimonials -->
+  </main>
+
+  <footer class="footer">
+    <div class="container-footer__context">
+      <h2 class="footer__title" id="contactUs">Contact Us</h2>
+      <p class="footer__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+    </div>
+    <!-- /.container-footer__context -->
+    <div class="container-map">
+      <div id="map" class="map"></div>
+    </div>
+    <!-- /.container-map -->
+    <div class="footer__logo">
+      <img class="footerLogo" src="img/logo-footer.png" alt="logo">
+    </div>
+    <!-- /.footerLogo -->
+    <p class="footer-rights">Copyright 2015. All rights Reserved</p>
+    <div class="container-footer__social">
+      <a class="footer__social_link footer__social_link-facebook" href="https://www.facebook.com/" target="_blank">
+      <svg class="svg-icon">
+          <use xlink:href="img/social-sprite.svg#facebook"></use>
+        </svg>
+      </a>
+      <a class="footer__social_link footer__social_link-twitter" href="https://www.twitter.com/" target="_blank">
+      <svg class="svg-icon">
+        <use xlink:href="img/social-sprite.svg#twitter"></use>
+      </svg>
+      </a>
+      <a class="footer__social_link footer__social_link-linkedin" href="https://www.linkedin.com/" target="_blank">
+      <svg class="svg-icon">
+        <use xlink:href="img/social-sprite.svg#linkedin"></use>
+      </svg>
+      </a>
+      <a class="footer__social_link footer__social_link-instagram" href="https://www.instagram.com/print__dream/" target="_blank">
+      <svg class="svg-icon">
+        <use xlink:href="img/social-sprite.svg#instagram"></use>
+      </svg>
+      </a>
+      <a class="footer__social_link footer__social_link-vimeo" href="https://www.vimeo.com/" target="_blank">
+      <svg class="svg-icon">
+        <use xlink:href="img/social-sprite.svg#vimeo"></use>
+      </svg>
+      </a>
+    </div>
+    <!-- /.container-footer__social -->
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--jQuery-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkloMPcNO6WOm_QKHm0TiBWX0oLj2JqQk&callback=initMap" async
+    defer></script>
+  <!-- =GMAPS= -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

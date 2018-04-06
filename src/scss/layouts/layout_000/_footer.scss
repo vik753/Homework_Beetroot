@@ -1,0 +1,71 @@
+.container-footer__context{
+    max-width: rem(470px);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer__title {
+    padding-top: rem(75px);
+    font-family: $titleFont;
+    font-size: rem(20px);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333b46;
+    letter-spacing: 0.2rem;
+  }
+  
+  .footer__text {
+    padding-top: rem(30px);
+    font-size: rem(14px);
+    text-align: center;
+  }
+
+  .container-map{
+    padding-top: rem(70px);
+  }
+
+  .map {
+    height: 440px;
+    width: 100%;
+ }
+
+ .footer__logo{
+   padding-top: rem(70px);
+   @include display(flex);
+   justify-content: center;
+ }
+
+ .footer-rights{
+   text-align: center;
+   font-size: rem(14px);
+   padding-top: rem(20px);
+ }
+
+ .container-footer__social{
+   display: flex;
+   justify-content: center;
+   padding-top: rem(35px);
+   padding-bottom: rem(70px);
+ }
+ 
+ .footer__social_link{
+   display: inline-block;
+   text-decoration: none;
+   color: $grayFontColor;
+   margin-right: rem(10px);
+ }
+ 
+ .footer__social_link:not(:last-of-type){
+   margin-right: rem(10px);
+ }
+
+ .svg-icon{
+  width: rem(26px);
+  height: rem(26px);
+  transition: 0.7s ease;
+  &:hover{
+    transform: scale(1.3);
+  }
+}
+  

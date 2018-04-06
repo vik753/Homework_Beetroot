@@ -1,0 +1,45 @@
+.container-header {
+    padding: rem(47px) 0.5rem rem(70px); //to correct on desktop!
+}
+
+.container_header_logoNav {
+    @include display(grid);
+
+    -ms-grid-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+.header__logo {
+    @include display(grid);
+
+    align-items: center;
+}
+
+.header__menu {
+    padding-top: 0;
+    position: relative;
+}
+
+.header__menu_mobile {
+    display: none;
+}
+
+.container-header__menu_links {
+    position: relative;
+    display: flex !important;
+    justify-content: flex-end;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header__menu_link {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: rem(15px);
+    padding: 0.21rem 1.2rem;
+}
+
+.container__header_context {
+    margin: rem(210px) auto;
+}

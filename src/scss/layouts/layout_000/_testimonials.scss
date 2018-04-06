@@ -1,0 +1,93 @@
+.container-testimonials {
+    background: #f3f3f3;
+    padding-bottom: rem(100px);
+}
+
+.container-testimonials__context {
+    max-width: rem(470px);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.testimonials__title {
+    padding-top: rem(75px);
+    font-family: $titleFont;
+    font-size: rem(20px);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333b46;
+    letter-spacing: 0.2rem;
+}
+
+.testimonials__text {
+    padding-top: rem(30px);
+    font-size: rem(14px);
+    text-align: center;
+}
+
+//===========Testimonials_slider=======
+.container-testimonials_slider {
+    max-width: $maxWidth;
+    margin: rem(60px) auto 0;
+    background: #fff;
+    padding: rem(45px) 0;
+}
+
+.bx-wrapper {
+    box-shadow: none;
+    margin-bottom: rem(30px);
+}
+
+.container-testimonials_slider-inner {
+    max-width: rem(995px);
+    margin: 0 auto;
+}
+
+.testimonials_slider__slide_context {
+    padding: 0 1rem;
+}
+
+.testimonials_slider__slide_img {
+    @include display(grid);
+    justify-content: center;
+}
+
+.testimonials_slider__slide_text {
+    padding-top: 1rem; //override in desktop
+    font-size: 0.9rem; //override in desktop
+}
+
+.testimonials_slider__slide_name {
+    font-weight: 600;
+    color: $green;
+    padding-top: rem(20px);
+}
+
+.testimonials_slider__slide_position {
+    font-size: rem(14px);
+    text-transform: uppercase;
+    color: #464646;
+}
+
+//===============\_testimonials.scss=======Override
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: -18px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    border: 1px solid $green;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: $green;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+    padding-left: 5px;
+}
+
+//===============\_testimonials.scss=======Override-END

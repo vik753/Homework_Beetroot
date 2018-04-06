@@ -1,0 +1,18 @@
+
+.galleryBlock__btn {
+  color: #464646;
+  padding: 0.7rem 0.5rem;
+  position: relative;
+
+  &:hover::after {
+    position: absolute;
+    content: '';
+    width: rem(30px);
+    height: 2px;
+    background: $green;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+}
+

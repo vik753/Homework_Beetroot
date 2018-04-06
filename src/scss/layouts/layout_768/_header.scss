@@ -1,0 +1,37 @@
+.header__menu_link {
+  //**************
+  &:hover {
+    border: 1px solid $white !important;
+  }
+}
+@keyframes goDown {
+  0% {
+    top: -15%;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 70%;
+    opacity: 0;
+  }
+}
+
+.header__btnNext_ico {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container__header_btnNext {
+  position: relative;
+
+  &:hover .header__btnNext_ico {
+    position: absolute;
+    animation: goDown 0.8s ease-in-out infinite;
+  }
+}

@@ -1,0 +1,152 @@
+.container-team__inner {
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+.container-team__context {
+    max-width: rem(465px);
+    margin: 0 auto;
+    padding: 0 1rem; //override in desktop
+}
+
+.team__title {
+    padding-top: rem(83px);
+    font-family: $titleFont;
+    font-size: rem(20px);
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333b46;
+    letter-spacing: 0.2rem;
+}
+
+.team__text {
+    padding-top: rem(30px);
+    font-size: rem(14px);
+    text-align: center;
+}
+
+//============SLIDER=============
+.container-team_slider {
+    padding-top: rem(65px);
+    padding-bottom: rem(135px);
+}
+
+.team_slider {
+    max-width: rem(1030px);
+    margin: 0 auto;
+}
+
+.team_slider__slide {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0.125rem;
+        height: rem(50px);
+        background: #19bd9a;
+        right: 2px;
+        top: rem(35px);
+    }
+}
+
+.team_slider__slide_img {
+    @include display(grid);
+    justify-content: center;
+}
+
+.team_slider__slide_context {
+    padding: 0 1rem; //override in desktop
+}
+
+.team_slider__slide_name {
+    font-size: rem(20px);
+    text-align: right;
+    padding-top: rem(25px);
+    color: #464646; //letter-spacing: 0.1rem;
+    padding-right: rem(44px);
+}
+
+.team_slider__slide_position {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: rem(14px);
+    text-align: right;
+    padding-top: 1rem;
+    color: #81868e;
+    font-weight: 300;
+    padding-right: rem(44px);
+}
+
+.team_slider__slide_text {
+    font-size: rem(14px);
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: rem(44px);
+}
+
+//===========SLICK-Styles===============
+.slick-dots {
+    position: absolute;
+    bottom: -65px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        height: 10px;
+        width: 10px;
+        cursor: pointer;
+        button {
+            background: transparent;
+            height: 10px;
+            width: 10px;
+            color: transparent;
+            &:before {
+                width: 10px;
+                height: 10px;
+                color: transparent;
+                background: transparent;
+                border: 1px solid $green;
+                border-radius: 50%;
+                opacity: 1;
+            }
+        }
+        &.slick-active button:before {
+            color: transparent;
+            opacity: 1;
+            background: $green; //*********
+            border: 1px solid $green;
+            border-radius: 50%;
+        }
+    }
+}
+
+//=============END Slick styles==========
+//=========ContactUs=======
+.container-contactUs {
+    background: url("../img/contactUsBg.jpg");
+    @include display(grid);
+    justify-content: center;
+}
+
+.contactUs__title {
+    padding-top: rem(55px);
+    text-align: center;
+    color: #fff;
+    font-size: rem(20px);
+}
+
+.contactUs__btn {
+    margin: rem(30px) 0 rem(55px) 0;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    justify-self: center;
+    border: 1px solid #fff;
+    padding: rem(8px) rem(28px);
+    border-radius: 30px;
+}

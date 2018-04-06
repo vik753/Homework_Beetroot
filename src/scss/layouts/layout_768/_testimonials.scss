@@ -1,0 +1,14 @@
+.testimonials_slider__slide_context{
+    padding: 0;
+    padding-right: 20px;
+}
+
+.testimonials_slider__slide_figure {
+    @include display(grid);
+    -ms-grid-columns:20% 80%;
+    grid-template-columns: 20% 80%;
+}
+
+.testimonials_slider__slide_img {
+    justify-content: left;
+}
